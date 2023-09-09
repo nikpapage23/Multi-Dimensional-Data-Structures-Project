@@ -85,7 +85,13 @@ def stemming_and_stopwords(df):
     stop_words = set(stopwords.words('english'))
     stemmer = PorterStemmer()
     df.loc[:, 'education'] = df['education'].apply(lambda doc: ' '.join([stemmer.stem(w) for w in doc.split() if w not in stop_words]))
-
+    # αφαίρεση χαρακτήρων που δεν είναι γράμματα αλφαβήτου
+    df.loc[:, 'education'] = df['education'].apply(lambda doc: ' '.join(letter for letter in doc.split() if letter.isalnum()))
+    # αφαίρεση αριθμών
+    df['education'] = df['education'].str.replace(r'\d+', '', regex=True)
+    # αφαίρεση παρενθέσεων
+    df['education'] = df['education'].str.replace(r'(', '', regex=True)
+    df['education'] = df['education'].str.replace(r')', '', regex=True)
 
 if __name__ == '__main__':
     scientists = get_urls()  # ανάκτηση των URLs όλων των επιστημόνων
