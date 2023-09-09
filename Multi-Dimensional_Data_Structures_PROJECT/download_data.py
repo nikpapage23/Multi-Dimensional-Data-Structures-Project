@@ -3,7 +3,8 @@ import string
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
-
+from nltk.corpus import stopwords
+from nltk.stem.porter import PorterStemmer
 
 # Συνάρτηση ανάκτησης πληροφοριών για έναν επιστήμονα από συγκεκριμένο URL
 def get_scientist_info(url):
@@ -37,6 +38,9 @@ def get_scientist_info(url):
 
     # Εξαγωγή κειμένου εκπαίδευσης
     education = ''
+    # Εξαγωγή αναφορών άρθρου
+    for tag in soup.find_all(class_="reference"):
+        tag.decompose()
     education_section = soup.find('span', string=lambda text: text and 'education' in text.lower(), attrs={'id': True})
     # Εύρεση του section της σελίδας που αναφέρεται στην εκπαίδευση του επιστήμονα
     if education_section:
@@ -76,6 +80,12 @@ def get_urls():
 
     return href_list
 
+# Συνάρτηση επεξεργασίας κειμένου εκπαίδευσης επιστημόνων
+def stemming_and_stopwords(df):
+    stop_words = set(stopwords.words('english'))
+    stemmer = PorterStemmer()
+    df.loc[:, 'education'] = df['education'].apply(lambda doc: ' '.join([stemmer.stem(w) for w in doc.split() if w not in stop_words]))
+
 
 if __name__ == '__main__':
     scientists = get_urls()  # ανάκτηση των URLs όλων των επιστημόνων
@@ -89,7 +99,7 @@ if __name__ == '__main__':
         # Αν η εκπαίδευση δεν είναι κενό string, πρόσθεσε τα δεδομένα στη λίστα
         if education:
             data_for_df.append([surname, awards, education])
-
+    
     # Δημιουργία dataframe για τα ανακτηθέντα δεδομένα
     df = pd.DataFrame(data_for_df, columns=['surname', 'awards', 'education'])
 
@@ -120,6 +130,8 @@ if __name__ == '__main__':
     df = df.query("surname not in ['Ng', 'Zadeh']")     # αφαίρεση εγγραφών
     df = df.reset_index(drop=True)
 
+    stemming_and_stopwords(df)
+    
     # Εγγραφή δεδομένων σε αρχείο CSV, περιλαμβάνοντας μόνο τις επιθυμητές στήλες
     df[['surname', 'awards', 'education']].to_csv('scientists_data.csv', index=False)
 
