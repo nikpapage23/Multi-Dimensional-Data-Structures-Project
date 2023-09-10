@@ -4,10 +4,18 @@ import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
 import time
 
-from lsh import *
-from tools import *
+from lsh.lsh import *
+from lsh.tools import *
 from numpy import stack
 from numpy.random import choice
+
+from os.path import dirname, abspath
+from sys import path
+
+# Get the path to the project root directory
+root_dir = dirname(dirname(abspath(__file__)))
+# Add the root directory to the system path
+path.append(root_dir)
 
 def display_results(results_list):
     table = BeautifulTable(maxwidth=150)
