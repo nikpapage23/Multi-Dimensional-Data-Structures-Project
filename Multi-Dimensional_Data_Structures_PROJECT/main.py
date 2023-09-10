@@ -41,9 +41,8 @@ def lsh_test(lst, thrs):
     lsh = LSH(nfuncs=50, bands=5).fit(one_hot_matrix, 1000)
 
     # get neigbors with similarity bigger than threshold%
-    print("All point pairs in space with similarity >= "+str(thrs*100)+"%")
     actual_neigbors = lsh.neighbors(thrs, cosine_similarity)
-    print("Total: "+str(len(actual_neigbors)))
+    print(str(len(actual_neigbors))+" point pairs in space with similarity >= "+str(thrs*100)+"%")
     print(actual_neigbors, end='\n\n')
     '''
     q_vec = choice(2, len(vocabulary))
