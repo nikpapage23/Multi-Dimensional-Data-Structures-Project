@@ -1,9 +1,9 @@
 from r_tree import *
 from range_tree import *
 from beautifultable import BeautifulTable
+import time
 import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
-import time
 
 
 def display_results(results_list):
