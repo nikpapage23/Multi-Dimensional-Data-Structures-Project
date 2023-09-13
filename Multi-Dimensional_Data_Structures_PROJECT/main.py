@@ -36,7 +36,8 @@ if __name__ == '__main__':
 
     if choice == 1:  # Δομή k-d tree
         [kdtree, points_xy, datamap] = build_kdtree()
-        results = query_kdtree(kdtree, points_xy, min_letter, max_letter, num_awards)
+        results = query_kdtree(kdtree, points_xy, datamap,
+                               min_letter, max_letter, num_awards)
         # display_results(results)
 
     elif choice == 2:  # Δομή Quad tree

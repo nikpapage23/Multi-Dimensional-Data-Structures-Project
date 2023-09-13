@@ -10,7 +10,7 @@ class KDTree:
 
 def build_kdtree():
     df = pd.read_csv("scientists_data.csv")
-    points_xy = []  # Store numerical data points
+    points_xy = []
     data_mapping = {}  # Create a mapping between KD-tree indices and data
 
     for i in range(len(df)):
@@ -21,14 +21,25 @@ def build_kdtree():
         data_mapping[i] = data  # Create a mapping between index and data
 
     kdtree = cKDTree(points_xy)  # Create a KD-tree using numerical points
+
     return kdtree, points_xy, data_mapping  # Return the KD-tree and data mapping
 
 
-def query_kdtree(kdtree, min_letter, max_letter, num_awards):
+def query_kdtree(kdtree, points_xy, data_mapping, min_letter, max_letter, num_awards):
     # Υπολογισμός των αριθμητικών τιμών του ελάχιστου και του μέγιστου γράμματος
     min_letter = ord(min_letter) - 65
     max_letter = ord(max_letter) - 65
 
-    # UPDATE se liges wres
+    query_midpoint_letter = (min_letter + max_letter) / 2
+    query_midpoint = [query_midpoint_letter, num_awards]
+    max_distance = query_midpoint_letter
 
-    print(indices)
+    matches = kdtree.query_ball_point(query_midpoint, max_distance)
+
+    for i in range(len(matches)):
+        query_results = [data_mapping[matches[i]][0],
+                         data_mapping[matches[i]][1], data_mapping[matches[i]][2]]
+
+    print(query_results)
+
+    # TODO: Convert query_results so that display_results can read it
