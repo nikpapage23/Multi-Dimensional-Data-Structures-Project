@@ -1,8 +1,8 @@
 from r_tree import *
 from beautifultable import BeautifulTable
+import time
 import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
-import time
 
 from lsh.lsh import *
 from lsh.tools import *
