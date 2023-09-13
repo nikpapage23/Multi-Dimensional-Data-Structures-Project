@@ -3,8 +3,6 @@ import string
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
-from nltk.corpus import stopwords
-from nltk.stem.porter import PorterStemmer
 
 # Συνάρτηση ανάκτησης πληροφοριών για έναν επιστήμονα από συγκεκριμένο URL
 def get_scientist_info(url):
@@ -54,7 +52,6 @@ def get_scientist_info(url):
 
     return surname, awards, education
 
-
 # Συνάρτηση ανάκτησης όλων των URLs των επιστημόνων από τη σελίδα της Wikipedia
 def get_urls():
     url = "https://en.wikipedia.org/wiki/List_of_computer_scientists"
@@ -79,19 +76,6 @@ def get_urls():
                     href_list.append(href)
 
     return href_list
-
-# Συνάρτηση επεξεργασίας κειμένου εκπαίδευσης επιστημόνων
-def stemming_and_stopwords(df):
-    stop_words = set(stopwords.words('english'))
-    stemmer = PorterStemmer()
-    df.loc[:, 'education'] = df['education'].apply(lambda doc: ' '.join([stemmer.stem(w) for w in doc.split() if w not in stop_words]))
-    # αφαίρεση χαρακτήρων που δεν είναι γράμματα αλφαβήτου
-    df.loc[:, 'education'] = df['education'].apply(lambda doc: ' '.join(letter for letter in doc.split() if letter.isalnum()))
-    # αφαίρεση αριθμών
-    df['education'] = df['education'].str.replace(r'\d+', '', regex=True)
-    # αφαίρεση παρενθέσεων
-    df['education'] = df['education'].str.replace(r'(', '', regex=True)
-    df['education'] = df['education'].str.replace(r')', '', regex=True)
 
 if __name__ == '__main__':
     scientists = get_urls()  # ανάκτηση των URLs όλων των επιστημόνων
@@ -136,8 +120,6 @@ if __name__ == '__main__':
     df = df.query("surname not in ['Ng', 'Zadeh']")     # αφαίρεση εγγραφών
     df = df.reset_index(drop=True)
 
-    stemming_and_stopwords(df)
-    
     # Εγγραφή δεδομένων σε αρχείο CSV, περιλαμβάνοντας μόνο τις επιθυμητές στήλες
     df[['surname', 'awards', 'education']].to_csv('scientists_data.csv', index=False)
 

@@ -12,6 +12,9 @@ from numpy.random import choice
 from os.path import dirname, abspath
 from sys import path
 
+from nltk.corpus import stopwords
+from nltk.stem.porter import PorterStemmer
+
 # Get the path to the project root directory
 root_dir = dirname(dirname(abspath(__file__)))
 # Add the root directory to the system path
@@ -30,11 +33,13 @@ def display_results(results_list):
     print("Results: "+str(len(table)))
 
 def lsh_test(lst, thrs):
+    lst = sorted(lst, key=lambda x: x["surname"])
     # convert list to df
     df = pd.DataFrame(lst)
+    # text preprocessing
+    stemming_and_stopwords(df)
     # data to hash
     data = df['education'].to_list()
-    
     # shingle size step
     k = 2
 
@@ -62,6 +67,17 @@ def lsh_test(lst, thrs):
     print(nearest_neigbors)
     '''
 
+def stemming_and_stopwords(df):
+    stop_words = set(stopwords.words('english'))
+    stemmer = PorterStemmer()
+    df.loc[:, 'education'] = df['education'].apply(lambda doc: ' '.join([stemmer.stem(w) for w in doc.split() if w not in stop_words]))
+    # αφαίρεση χαρακτήρων που δεν είναι γράμματα αλφαβήτου
+    df.loc[:, 'education'] = df['education'].apply(lambda doc: ' '.join(letter for letter in doc.split() if letter.isalnum()))
+    # αφαίρεση αριθμών
+    df['education'] = df['education'].str.replace(r'\d+', '', regex=True)
+    # αφαίρεση παρενθέσεων
+    df['education'] = df['education'].str.replace(r'(', '', regex=True)
+    df['education'] = df['education'].str.replace(r')', '', regex=True)
 
 if __name__ == '__main__':
     # Εισαγωγή των απαιτούμενων πληροφοριών αναζήτησης από τον χρήστη
