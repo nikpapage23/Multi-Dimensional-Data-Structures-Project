@@ -10,19 +10,22 @@ class KDTree:
 
 def build_kdtree():
     df = pd.read_csv("scientists_data.csv")
-    points_xy = []
-    data_mapping = {}  # Create a mapping between KD-tree indices and data
+    points_xy = []  # x , y = (int)surname, awards
+    data_mapping = {}  # Mapping x,y -> education
 
+    # Αποθήκευση των δεδομένων surname & awards του .csv σε πίνακα
+    # και mapping όλων των στοιχείων για εύκολη πρόσβαση στο education
     for i in range(len(df)):
         x = ord(df.iloc[i]['surname'][0]) - 65
         y = df.iloc[i]['awards']
         data = (df.iloc[i]['surname'], df.iloc[i]['awards'], df.iloc[i]['education'])
         points_xy.append([x, y])
-        data_mapping[i] = data  # Create a mapping between index and data
+        data_mapping[i] = data
 
-    kdtree = cKDTree(points_xy)  # Create a KD-tree using numerical points
+    # Δημιουργία δέντρου χρησιμοποιώντας τα x, y points
+    kdtree = cKDTree(points_xy)
 
-    return kdtree, points_xy, data_mapping  # Return the KD-tree and data mapping
+    return kdtree, points_xy, data_mapping
 
 
 def query_kdtree(kdtree, points_xy, data_mapping, min_letter, max_letter, num_awards):
@@ -34,7 +37,7 @@ def query_kdtree(kdtree, points_xy, data_mapping, min_letter, max_letter, num_aw
     query_midpoint = [query_midpoint_letter, num_awards]
     max_distance = query_midpoint_letter
 
-    # TODO: Fix query radius
+    # TODO: Tranform Circle radius to Rectanglular
 
     matches = kdtree.query_ball_point(query_midpoint, max_distance)
     print(f"matches = {matches}")
@@ -42,9 +45,8 @@ def query_kdtree(kdtree, points_xy, data_mapping, min_letter, max_letter, num_aw
     query_results = [[0 for _ in range(3)] for _ in range(len(matches))]
 
     for i in range(len(matches)):
-        query_results[i][0] = data_mapping[matches[i]][0]
-        query_results[i][1] = data_mapping[matches[i]][1]
-        query_results[i][2] = data_mapping[matches[i]][2]
+        for j in range(3):
+            query_results[i][j] = data_mapping[matches[i]][j]
 
     for i in range(len(matches)):
         print(query_results[i])
