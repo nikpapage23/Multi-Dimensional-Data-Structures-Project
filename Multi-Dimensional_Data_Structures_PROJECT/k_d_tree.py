@@ -34,12 +34,19 @@ def query_kdtree(kdtree, points_xy, data_mapping, min_letter, max_letter, num_aw
     query_midpoint = [query_midpoint_letter, num_awards]
     max_distance = query_midpoint_letter
 
+    # TODO: Fix query radius
+
     matches = kdtree.query_ball_point(query_midpoint, max_distance)
+    print(f"matches = {matches}")
+
+    query_results = [[0 for _ in range(3)] for _ in range(len(matches))]
 
     for i in range(len(matches)):
-        query_results = [data_mapping[matches[i]][0],
-                         data_mapping[matches[i]][1], data_mapping[matches[i]][2]]
+        query_results[i][0] = data_mapping[matches[i]][0]
+        query_results[i][1] = data_mapping[matches[i]][1]
+        query_results[i][2] = data_mapping[matches[i]][2]
 
-    print(query_results)
+    for i in range(len(matches)):
+        print(query_results[i])
 
     # TODO: Convert query_results so that display_results can read it
