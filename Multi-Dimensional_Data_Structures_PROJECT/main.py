@@ -1,10 +1,11 @@
 from r_tree import *
+from k_d_tree import *
 from range_tree import *
 from lsh.lsh import *
 from lsh.tools import *
 from beautifultable import BeautifulTable
 import warnings
-
+import time
 warnings.filterwarnings("ignore", category=FutureWarning)
 from numpy import stack
 from nltk.corpus import stopwords
@@ -79,13 +80,12 @@ if __name__ == '__main__':
 
     start_time = time.time()
 
-    if choice == 1:  # Δομή k-d tree
+    if user_choice == 1:  # Δομή k-d tree
         [kdtree, points_xy, datamap] = build_kdtree()
         results = query_kdtree(kdtree, points_xy, datamap,
                                min_letter, max_letter, num_awards)
-        # display_results(results)
-
-    elif choice == 2:  # Δομή Quad tree
+        display_results(results)
+    elif user_choice == 2:  # Δομή Quad tree
         pass
     elif user_choice == 3:   # Δομή Range tree
         range_tree = build_range_tree()
