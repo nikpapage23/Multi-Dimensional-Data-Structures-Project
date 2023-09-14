@@ -35,6 +35,7 @@ def display_results(results_list):
 
 def lsh_test(lst, thrs, buc):
     print("Number of buckets: "+str(buc))
+    # calculate the number of hash functions based on buckets total number
     if buc > 300:
         n_func = 20
     else:
@@ -105,13 +106,13 @@ if __name__ == '__main__':
     elif user_choice == 3:   # Δομή Range tree
         range_tree = build_range_tree()
         results = query_range_tree(range_tree, min_letter, max_letter, num_awards)
-        #display_results(results)
+        display_results(results)
         n_buckets = len(results) * 2
         lsh_test(results, lsh_threshold, n_buckets)
     elif user_choice == 4:   # Δομή R-tree
         rtree = build_rtree()
         results = query_rtree(rtree, min_letter, max_letter, num_awards)
-        #display_results(results)
+        display_results(results)
         n_buckets = len(results) * 2
         lsh_test(results, lsh_threshold, n_buckets)
 
