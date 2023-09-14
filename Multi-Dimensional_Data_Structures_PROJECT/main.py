@@ -9,7 +9,7 @@ from lsh.lsh import *
 from lsh.tools import *
 from numpy import stack
 from numpy.random import choice
-
+import math
 from os.path import dirname, abspath
 from sys import path
 
@@ -31,10 +31,15 @@ def display_results(results_list):
         table.append_row([result["surname"], result["awards"], result["education"]])
 
     print(table)
-    print("Results: "+str(len(table)))
+    print("Search Results: "+str(len(table)))
 
 def lsh_test(lst, thrs, buc):
     print("Number of buckets: "+str(buc))
+    if buc > 300:
+        n_func = 20
+    else:
+        n_func = 10
+    print("Number of functions: "+str(n_func))
     lst = sorted(lst, key=lambda x: x["surname"])
     # convert list to df
     df = pd.DataFrame(lst)
@@ -53,7 +58,7 @@ def lsh_test(lst, thrs, buc):
 
     # create LSH model providing the bands magnitute 
     # in fit hashes each column for each band of the sign matrix M to a hash table with k buckets
-    lsh = LSH(nfuncs=500, bands=5).fit(one_hot_matrix, buc)
+    lsh = LSH(n_func, 5).fit(one_hot_matrix, buc)
 
     # get neigbors with similarity bigger than threshold%
     actual_neigbors = lsh.neighbors(thrs, cosine_similarity)
@@ -100,13 +105,13 @@ if __name__ == '__main__':
     elif user_choice == 3:   # Δομή Range tree
         range_tree = build_range_tree()
         results = query_range_tree(range_tree, min_letter, max_letter, num_awards)
-        display_results(results)
+        #display_results(results)
         n_buckets = len(results) * 2
         lsh_test(results, lsh_threshold, n_buckets)
     elif user_choice == 4:   # Δομή R-tree
         rtree = build_rtree()
         results = query_rtree(rtree, min_letter, max_letter, num_awards)
-        display_results(results)
+        #display_results(results)
         n_buckets = len(results) * 2
         lsh_test(results, lsh_threshold, n_buckets)
 
