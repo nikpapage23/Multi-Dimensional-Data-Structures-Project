@@ -8,8 +8,7 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 from lsh.lsh import *
 from lsh.tools import *
 from numpy import stack
-from numpy.random import choice
-import math
+
 from os.path import dirname, abspath
 from sys import path
 
@@ -65,15 +64,6 @@ def lsh_test(lst, thrs, buc):
     actual_neigbors = lsh.neighbors(thrs, cosine_similarity)
     print(str(len(actual_neigbors))+" point pairs in space with similarity >= "+str(thrs*100)+"%")
     print(actual_neigbors, end='\n\n')
-    '''
-    q_vec = choice(2, len(vocabulary))
-
-    r=0.1 # radius to search
-    nearest_neigbors = lsh.get_nearest_neighbors(q_vec, r)
-    print(str(len(nearest_neigbors))+f" point pairs withing radius {r} of query")
-    
-    print(nearest_neigbors)
-    '''
 
 def stemming_and_stopwords(df):
     stop_words = set(stopwords.words('english'))
