@@ -30,16 +30,16 @@ def display_results(results_list):
         table.append_row([result["surname"], result["awards"], result["education"]])
 
     print(table)
-    print("Search Results: "+str(len(table)))
+    print(str(len(table))+" results")
 
 def lsh_test(lst, thrs, buc):
-    print("Number of buckets: "+str(buc))
+    print(str(buc)+" buckets")
     # calculate the number of hash functions based on buckets total number
     if buc > 300:
         n_func = 20
     else:
         n_func = 10
-    print("Number of functions: "+str(n_func))
+    print(str(n_func)+ " hash functions")
     lst = sorted(lst, key=lambda x: x["surname"])
     # convert list to df
     df = pd.DataFrame(lst)
