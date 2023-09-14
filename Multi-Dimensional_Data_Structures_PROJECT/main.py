@@ -1,24 +1,14 @@
 from r_tree import *
 from range_tree import *
+from lsh.lsh import *
+from lsh.tools import *
 from beautifultable import BeautifulTable
 import time
 import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
-
-from lsh.lsh import *
-from lsh.tools import *
 from numpy import stack
-
-from os.path import dirname, abspath
-from sys import path
-
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
-
-# Get the path to the project root directory
-root_dir = dirname(dirname(abspath(__file__)))
-# Add the root directory to the system path
-path.append(root_dir)
 
 def display_results(results_list):
     table = BeautifulTable(maxwidth=150)
@@ -34,35 +24,32 @@ def display_results(results_list):
 
 def lsh_test(lst, thrs, buc):
     print(str(buc)+" buckets")
-    # calculate the number of hash functions based on buckets total number
+    # υπολογισμός hash functions ανάλογα με το πόσα buckets έχουμε
     if buc > 300:
         n_func = 20
     else:
         n_func = 10
     print(str(n_func)+ " hash functions")
     lst = sorted(lst, key=lambda x: x["surname"])
-    # convert list to df
+    # μετατροπή λίστας σε dataframe
     df = pd.DataFrame(lst)
-    # text preprocessing
+    # επεξεργασία κειμένου
     stemming_and_stopwords(df)
-    # data to hash
+    # δεδομένα για hashing
     data = df['education'].to_list()
-    # shingle size step
-    k = 2
 
-    # create vocabulary with shingles        
-    vocabulary = set().union(*[kshingle(sent, k) for sent in data])
+    # δημιουργία του vocabulary των shingles        
+    vocabulary = set().union(*[kshingle(sent, 2) for sent in data])
     
-    # one hot representation of each document
+    # αναπαράσταση των κειμένων ως one hot
     one_hot_matrix = stack([one_hot_encoding(vocabulary, sent) for sent in data]).T
 
-    # create LSH model providing the bands magnitute 
-    # in fit hashes each column for each band of the sign matrix M to a hash table with k buckets
+    # δημιουργία του LSH μοντέλου με n_func και buc
     lsh = LSH(n_func, 5).fit(one_hot_matrix, buc)
 
-    # get neigbors with similarity bigger than threshold%
+    # γειτονικά σημεία με cosine similarity μεγαλύτερο από το user defined threshold
     actual_neigbors = lsh.neighbors(thrs, cosine_similarity)
-    print(str(len(actual_neigbors))+" point pairs in space with similarity >= "+str(thrs*100)+"%")
+    print(str(len(actual_neigbors))+" candidates with at least "+str(int(thrs*100))+"%"+" similarity")
     print(actual_neigbors, end='\n\n')
 
 def stemming_and_stopwords(df):
