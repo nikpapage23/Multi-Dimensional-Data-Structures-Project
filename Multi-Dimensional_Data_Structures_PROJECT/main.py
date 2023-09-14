@@ -3,8 +3,8 @@ from range_tree import *
 from lsh.lsh import *
 from lsh.tools import *
 from beautifultable import BeautifulTable
-import time
 import warnings
+
 warnings.filterwarnings("ignore", category=FutureWarning)
 from numpy import stack
 from nltk.corpus import stopwords
@@ -70,15 +70,22 @@ if __name__ == '__main__':
     min_letter, max_letter = input("Εισάγετε διάστημα ονομάτων στη μορφή X,X: ").upper().split(',')
     num_awards = int(input("Εισάγετε ελάχιστο αριθμό βραβείων: "))
 
+    min_letter = min_letter.upper()
+    max_letter = max_letter.upper()
+
     # Επιλογή πολυδιάστατης δομής για αποθήκευση των δεδομένων
     print("\n1. k-d tree\n2. Quad tree\n3. Range tree\n4. R-tree")
     user_choice = int(input("Επιλέξτε δομή: "))
 
     start_time = time.time()
 
-    if user_choice == 1:     # Δομή k-d tree
-        pass
-    elif user_choice == 2:   # Δομή Quad tree
+    if choice == 1:  # Δομή k-d tree
+        [kdtree, points_xy, datamap] = build_kdtree()
+        results = query_kdtree(kdtree, points_xy, datamap,
+                               min_letter, max_letter, num_awards)
+        # display_results(results)
+
+    elif choice == 2:  # Δομή Quad tree
         pass
     elif user_choice == 3:   # Δομή Range tree
         range_tree = build_range_tree()
@@ -95,4 +102,3 @@ if __name__ == '__main__':
 
     end_time = time.time()
     print(end_time - start_time)
-
