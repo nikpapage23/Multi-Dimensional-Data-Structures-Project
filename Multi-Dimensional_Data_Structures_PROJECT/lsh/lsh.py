@@ -177,7 +177,8 @@ class LSH:
         
         # fetch unfiltered candidates
         cands = set().union(*self._get_candidates())
-        
+        print("All candidates: "+str(len(cands)))
+        print(cands)
         actual_neigbors = {}
 
         # for each pair in each bucket of each band
