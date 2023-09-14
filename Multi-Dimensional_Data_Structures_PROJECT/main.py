@@ -53,7 +53,7 @@ def lsh_test(lst, thrs, buc):
 
     # create LSH model providing the bands magnitute 
     # in fit hashes each column for each band of the sign matrix M to a hash table with k buckets
-    lsh = LSH(nfuncs=500, bands=5).fit(one_hot_matrix, 1000)
+    lsh = LSH(nfuncs=500, bands=5).fit(one_hot_matrix, buc)
 
     # get neigbors with similarity bigger than threshold%
     actual_neigbors = lsh.neighbors(thrs, cosine_similarity)
