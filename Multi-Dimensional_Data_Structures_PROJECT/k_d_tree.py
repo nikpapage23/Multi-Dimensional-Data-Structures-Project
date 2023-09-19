@@ -77,8 +77,7 @@ def build_kdtree():
 
     # Δημιουργία δέντρου χρησιμοποιώντας τα x, y points
     kdtree = KDTree()
-    for point in points:
-        kdtree.insert(point)
+    kdtree.root = kdtree.build(points)
 
     return kdtree
 
