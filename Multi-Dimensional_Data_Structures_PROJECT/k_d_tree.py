@@ -1,54 +1,105 @@
 import pandas as pd
-import numpy as np
-from scipy.spatial import cKDTree
 
+class Node:
+    def __init__(self, point, axis):
+        self.point = point
+        self.left = None
+        self.right = None
+        self.axis = axis
 
 class KDTree:
     def __init__(self):
-        self.data_list = []  # Λίστα για αποθήκευση των δεδομένων
+        self.root = None
 
+    def build(self, points, depth=0):
+        if not points:
+            return None
+
+        axis = depth % 2
+        points.sort(key=lambda x: x[axis])
+        median = len(points) // 2
+
+        node = Node(points[median], axis)
+        node.left = self.build(points[:median], depth + 1)
+        node.right = self.build(points[median + 1:], depth + 1)
+
+        return node
+
+    def insert(self, point):
+        self.root = self._insert(self.root, point)
+
+    def _insert(self, root, point, depth=0):
+        if root is None:
+            return Node(point, depth % 2)
+
+        if point == root.point:
+            return root
+
+        if point[root.axis] < root.point[root.axis]:
+            root.left = self._insert(root.left, point, depth + 1)
+        else:
+            root.right = self._insert(root.right, point, depth + 1)
+
+        return root
+
+    def query(self, rect, node=None):
+        if node is None:
+            node = self.root
+
+        if node is None:
+            return []
+
+        x1, y1, x2, y2 = rect
+        results = []
+
+        if x1 <= node.point[0] <= x2 and y1 <= node.point[1] <= y2:
+            results.append(node.point)
+
+        if node.left and (node.axis == 1 or x1 <= node.point[0]):
+            results.extend(self.query(rect, node.left))
+        if node.right and (node.axis == 1 or x2 >= node.point[0]):
+            results.extend(self.query(rect, node.right))
+
+        return results
 
 def build_kdtree():
     df = pd.read_csv("scientists_data.csv")
-    points_xy = []  # x , y = (int)surname, awards
-    data_mapping = {}  # Mapping x,y -> education
+    points = []  # x , y = (int)surname, awards
 
-    # Αποθήκευση των δεδομένων surname & awards του .csv σε πίνακα
-    # και mapping όλων των στοιχείων για εύκολη πρόσβαση στο education
+    # Για κάθε εγγραφή του dataframe, υπολογίζουμε τις συντεταγμένες (x, y)
+    # βάσει της αριθμητικής τιμής του πρώτου γράμματος του επωνύμου και του
+    # αριθμού των βραβείων αντίστοιχα, και εισάγουμε το σημείο στη λίστα points.
     for i in range(len(df)):
         x = ord(df.iloc[i]['surname'][0]) - 65
         y = df.iloc[i]['awards']
         data = (df.iloc[i]['surname'], df.iloc[i]['awards'], df.iloc[i]['education'])
-        points_xy.append([x, y])
-        data_mapping[i] = data
+        points.append((x, y, i))
 
     # Δημιουργία δέντρου χρησιμοποιώντας τα x, y points
-    kdtree = cKDTree(points_xy)
+    kdtree = KDTree()
+    kdtree.root = kdtree.build(points)
 
-    return kdtree, points_xy, data_mapping
+    return kdtree
 
-
-def query_kdtree(kdtree, points_xy, data_mapping, min_letter, max_letter, num_awards):
+def query_kdtree(kdtree, min_letter, max_letter, num_awards):
     # Υπολογισμός των αριθμητικών τιμών του ελάχιστου και του μέγιστου γράμματος
     min_letter = ord(min_letter) - 65
     max_letter = ord(max_letter) - 65
 
-    query_midpoint_letter = (min_letter + max_letter) / 2
-    query_midpoint = [query_midpoint_letter, num_awards]
-    max_distance = query_midpoint_letter
+    # (x1, y1, x2, y2)
+    rectangle = (min_letter, num_awards, max_letter, float('inf'))
 
-    # TODO: Tranform Circle radius to Rectanglular
+    query_results = []
+    query_results = kdtree.query(rectangle)
 
-    matches = kdtree.query_ball_point(query_midpoint, max_distance)
-    print(f"matches = {matches}")
+    final_results = []
+    df = pd.read_csv("scientists_data.csv")
 
-    query_results = [[0 for _ in range(3)] for _ in range(len(matches))]
+    for result in query_results:
+        index = result[2]  # παίρνουμε το index από τα δεδομένα του Range Tree
+        surname = df.iloc[index]['surname']
+        awards = df.iloc[index]['awards']
+        education = df.iloc[index]['education']
+        final_results.append({"surname": surname, "awards": awards, "education": education})
 
-    for i in range(len(matches)):
-        for j in range(3):
-            query_results[i][j] = data_mapping[matches[i]][j]
-
-    for i in range(len(matches)):
-        print(query_results[i])
-
-    # TODO: Convert query_results so that display_results can read it
+    return final_results
