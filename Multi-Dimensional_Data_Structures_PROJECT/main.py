@@ -66,53 +66,20 @@ def stemming_and_stopwords(df):
     df['education'] = df['education'].str.replace(r'(', '', regex=True)
     df['education'] = df['education'].str.replace(r')', '', regex=True)
 
-def main_app(lsh_threshold, min_letter, max_letter, num_awards, choice):
-    if choice == 1:     # Δομή k-d tree
+def main_app(lsh_threshold, min_letter, max_letter, num_awards, user_choice):
+    start_time = time.time()
+    if user_choice == 1:     # Δομή k-d tree
         k_d_tree = build_kdtree()
         results = query_kdtree(k_d_tree, min_letter, max_letter, num_awards)
+        n_buckets = len(results) * 2
         display_results(results)
-    elif choice == 2:   # Δομή Quad tree
-        # quad_tree = build_quad_tree()
-        # results = query_quad_tree(quad_tree, min_letter, max_letter, num_awards)
-        # display_results(results)
-        pass
-    elif choice == 3:   # Δομή Range tree
-        range_tree = build_range_tree()
-        results = query_range_tree(range_tree, min_letter, max_letter, num_awards)
+        lsh_test(results, lsh_threshold, n_buckets)
+    elif user_choice == 2:   # Δομή Quad tree
+        quad_tree = build_quad_tree()
+        results = query_quad_tree(quad_tree, min_letter, max_letter, num_awards)
+        n_buckets = len(results) * 2
         display_results(results)
-    elif choice == 4:   # Δομή R-tree
-        rtree = build_rtree()
-        results = query_rtree(rtree, min_letter, max_letter, num_awards)
-        display_results(results)
-
-    # ~ LSH CODE ~
-
-
-if __name__ == '__main__':
-    # Εισαγωγή των απαιτούμενων πληροφοριών αναζήτησης από τον χρήστη
-    lsh_threshold = float(input("Εισάγετε ελάχιστο ποσοστό ομοιότητας (0 - 1): "))
-    min_letter, max_letter = input("Εισάγετε διάστημα ονομάτων στη μορφή X,X: ").upper().split(',')
-    num_awards = int(input("Εισάγετε ελάχιστο αριθμό βραβείων: "))
-
-    min_letter = min_letter.upper()
-    max_letter = max_letter.upper()
-
-    # Επιλογή πολυδιάστατης δομής για αποθήκευση των δεδομένων
-    print("\n1. k-d tree\n2. Quad tree\n3. Range tree\n4. R-tree")
-    user_choice = int(input("Επιλέξτε δομή: "))
-
-    main_app(lsh_threshold, min_letter, max_letter, num_awards, user_choice)
-
-    '''
-    start_time = time.time()
-
-    if user_choice == 1:  # Δομή k-d tree
-        [kdtree, points_xy, datamap] = build_kdtree()
-        results = query_kdtree(kdtree, points_xy, datamap,
-                               min_letter, max_letter, num_awards)
-        display_results(results)
-    elif user_choice == 2:  # Δομή Quad tree
-        pass
+        lsh_test(results, lsh_threshold, n_buckets)
     elif user_choice == 3:   # Δομή Range tree
         range_tree = build_range_tree()
         results = query_range_tree(range_tree, min_letter, max_letter, num_awards)
@@ -125,10 +92,18 @@ if __name__ == '__main__':
         display_results(results)
         n_buckets = len(results) * 2
         lsh_test(results, lsh_threshold, n_buckets)
-
-    # LSH
-
     end_time = time.time()
     print(end_time - start_time)
-    '''
 
+
+if __name__ == '__main__':
+    # Εισαγωγή των απαιτούμενων πληροφοριών αναζήτησης από τον χρήστη
+    lsh_threshold = float(input("Εισάγετε ελάχιστο ποσοστό ομοιότητας (0 - 1): "))
+    min_letter, max_letter = input("Εισάγετε διάστημα ονομάτων στη μορφή X,X: ").upper().split(',')
+    num_awards = int(input("Εισάγετε ελάχιστο αριθμό βραβείων: "))
+
+    # Επιλογή πολυδιάστατης δομής για αποθήκευση των δεδομένων
+    print("\n1. k-d tree\n2. Quad tree\n3. Range tree\n4. R-tree")
+    user_choice = int(input("Επιλέξτε δομή: "))
+
+    main_app(lsh_threshold, min_letter, max_letter, num_awards, user_choice)
