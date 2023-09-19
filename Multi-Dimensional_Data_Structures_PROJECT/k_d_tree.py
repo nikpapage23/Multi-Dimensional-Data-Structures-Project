@@ -1,100 +1,106 @@
 import pandas as pd
-from scipy.spatial import cKDTree
+
+class Node:
+    def __init__(self, point, axis):
+        self.point = point
+        self.left = None
+        self.right = None
+        self.axis = axis
 
 class KDTree:
-    def __init__(self, point, left=None, right=None):
-        self.point = point
-        self.left = left
-        self.right = right
+    def __init__(self):
+        self.root = None
 
-def kd_tree(points, depth=0):
-    if len(points) == 0:
-        return None
+    def build(self, points, depth=0):
+        if not points:
+            return None
 
-    k = 2  # 2-dimensional space
-    axis = depth % k
+        axis = depth % 2
+        points.sort(key=lambda x: x[axis])
+        median = len(points) // 2
 
-    points.sort(key=lambda x: x[axis])
-    median = len(points) // 2
+        node = Node(points[median], axis)
+        node.left = self.build(points[:median], depth + 1)
+        node.right = self.build(points[median + 1:], depth + 1)
 
-    return KDTree(
-        point=points[median],
-        left=kd_tree(points[:median], depth + 1),
-        right=kd_tree(points[median + 1:], depth + 1)
-    )
+        return node
 
-def insert(node, point, depth=0):
-    if node is None:
-        return KDTree(point)
+    def insert(self, point):
+        self.root = self._insert(self.root, point)
 
-    k = 2  # 2-dimensional space
-    axis = depth % k
+    def _insert(self, root, point, depth=0):
+        if root is None:
+            return Node(point, depth % 2)
 
-    if point[axis] < node.point[axis]:
-        node.left = insert(node.left, point, depth + 1)
-    else:
-        node.right = insert(node.right, point, depth + 1)
+        if point == root.point:
+            return root
 
-    return node
+        if point[root.axis] < root.point[root.axis]:
+            root.left = self._insert(root.left, point, depth + 1)
+        else:
+            root.right = self._insert(root.right, point, depth + 1)
 
-def print_tree(node, depth=0):
-    if node is None:
-        return
-    print("  " * depth + str(node.point))
-    print_tree(node.left, depth + 1)
-    print_tree(node.right, depth + 1)
+        return root
 
-def range_query(node, min_point, max_point, depth=0):
-    if node is None:
-        return []
+    def query(self, rect, node=None):
+        if node is None:
+            node = self.root
 
-    k = 2  # 2-dimensional space
-    axis = depth % k
+        if node is None:
+            return []
 
-    if min_point[0] <= node.point[0] <= max_point[0] and min_point[1] <= node.point[1] <= max_point[1]:
-        left_points = range_query(node.left, min_point, max_point, depth + 1)
-        right_points = range_query(node.right, min_point, max_point, depth + 1)
-        return left_points + [node.point] + right_points
-    elif min_point[axis] <= node.point[axis]:
-        return range_query(node.left, min_point, max_point, depth + 1)
-    else:
-        return range_query(node.right, min_point, max_point, depth + 1)
+        x1, y1, x2, y2 = rect
+        results = []
 
+        if x1 <= node.point[0] <= x2 and y1 <= node.point[1] <= y2:
+            results.append(node.point)
 
+        if node.left and (node.axis == 1 or x1 <= node.point[0]):
+            results.extend(self.query(rect, node.left))
+        if node.right and (node.axis == 1 or x2 >= node.point[0]):
+            results.extend(self.query(rect, node.right))
+
+        return results
 
 def build_kdtree():
     df = pd.read_csv("scientists_data.csv")
-    points_xy = []  # x , y = (int)surname, awards
-    data_mapping = {}  # Mapping x,y -> education
+    points = []  # x , y = (int)surname, awards
 
-    # Αποθήκευση των δεδομένων surname & awards του .csv σε πίνακα
-    # και mapping όλων των στοιχείων για εύκολη πρόσβαση στο education
+    # Για κάθε εγγραφή του dataframe, υπολογίζουμε τις συντεταγμένες (x, y)
+    # βάσει της αριθμητικής τιμής του πρώτου γράμματος του επωνύμου και του
+    # αριθμού των βραβείων αντίστοιχα, και εισάγουμε το σημείο στη λίστα points.
     for i in range(len(df)):
         x = ord(df.iloc[i]['surname'][0]) - 65
         y = df.iloc[i]['awards']
         data = (df.iloc[i]['surname'], df.iloc[i]['awards'], df.iloc[i]['education'])
-        points_xy.append([x, y])
-        data_mapping[i] = data
+        points.append((x, y, i))
 
     # Δημιουργία δέντρου χρησιμοποιώντας τα x, y points
-    kdtree = kd_tree(points_xy)
+    kdtree = KDTree()
+    for point in points:
+        kdtree.insert(point)
 
-    return kdtree, data_mapping
+    return kdtree
 
-
-def query_kdtree(kdtree, data_mapping, min_letter, max_letter, num_awards):
+def query_kdtree(kdtree, min_letter, max_letter, num_awards):
     # Υπολογισμός των αριθμητικών τιμών του ελάχιστου και του μέγιστου γράμματος
     min_letter = ord(min_letter) - 65
     max_letter = ord(max_letter) - 65
 
-    min_point = (min_letter, max_letter)
-    max_point = (num_awards, float('inf'))
+    # (x1, y1, x2, y2)
+    rectangle = (min_letter, num_awards, max_letter, float('inf'))
 
-    print("\nPoints in range", min_point, "to", max_point)
+    query_results = []
+    query_results = kdtree.query(rectangle)
 
-    matches = range_query(kdtree, min_point, max_point)
+    final_results = []
+    df = pd.read_csv("scientists_data.csv")
 
-    for point in matches:
-        print(point)
+    for result in query_results:
+        index = result[2]  # παίρνουμε το index από τα δεδομένα του Range Tree
+        surname = df.iloc[index]['surname']
+        awards = df.iloc[index]['awards']
+        education = df.iloc[index]['education']
+        final_results.append({"surname": surname, "awards": awards, "education": education})
 
-    # TODO: Convert results to readable form
+    return final_results

@@ -1,7 +1,7 @@
 from r_tree import *
 from range_tree import *
 from k_d_tree import *
-from quad_tree import *
+# from quad_tree import *
 from beautifultable import BeautifulTable
 import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
@@ -20,8 +20,9 @@ def display_results(results_list):
 
 def main_app(lsh_threshold, min_letter, max_letter, num_awards, choice):
     if choice == 1:     # Δομή k-d tree
-        k_d_tree, data_mapping = build_kdtree()
-        results = query_kdtree(k_d_tree, data_mapping, min_letter, max_letter, num_awards)
+        k_d_tree = build_kdtree()
+        results = query_kdtree(k_d_tree, min_letter, max_letter, num_awards)
+        display_results(results)
     elif choice == 2:   # Δομή Quad tree
         # quad_tree = build_quad_tree()
         # results = query_quad_tree(quad_tree, min_letter, max_letter, num_awards)
