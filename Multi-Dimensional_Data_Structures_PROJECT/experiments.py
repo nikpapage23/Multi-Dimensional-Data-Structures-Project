@@ -8,16 +8,16 @@ execution_times = {choice: [] for choice in range(1, 5)}
 
 # Για κάθε μία από τις 4 επιλογές: τρέχουμε 10 φορές τη συνάρτηση main_app
 # δίνοντας κάθε φορά διαφορετικές-τυχαίες εισόδους.
-for choice in range(1, 5):
-    for i in range(10):
-        min_letter = chr(random.randint(ord('A'), ord('Y')))    # τυχαίος χαρακτήρας στο διάστημα [A, Y]
-        # τυχαίος χαρακτήρας στο διάστημα [min_letter + 1, Z]
-        max_letter = chr(random.randint(ord(min_letter) + 1, ord('Z')))
-        letter_range = min_letter + ',' + max_letter
-        num_awards = random.randint(0, 10)  # τυχαίος ακέραιος αριθμός στο διάστημα [0, 10]
-        lsh_threshold = round(random.uniform(0.1, 0.7), 2)  # τυχαίος δεκαδικός αριθμός στο διάστημα [0.1, 0.7]
-        print(letter_range, num_awards, lsh_threshold, choice)
+for i in range(10):
+    min_letter = chr(random.randint(ord('A'), ord('Y')))    # τυχαίος χαρακτήρας στο διάστημα [A, Y]
+    # τυχαίος χαρακτήρας στο διάστημα [min_letter + 1, Z]
+    max_letter = chr(random.randint(ord(min_letter) + 1, ord('Z')))
+    letter_range = min_letter + ',' + max_letter
+    num_awards = random.randint(0, 10)  # τυχαίος ακέραιος αριθμός στο διάστημα [0, 10]
+    lsh_threshold = round(random.uniform(0.1, 0.7), 2)  # τυχαίος δεκαδικός αριθμός στο διάστημα [0.1, 0.7]
 
+    for choice in range(1, 5):
+        print(letter_range, num_awards, lsh_threshold, choice)
         start_time = time.time()    # ξεκίνημα χρονομέτρησης
         main_app(lsh_threshold, min_letter, max_letter, num_awards, choice)
         end_time = time.time()      # τέλος χρονομέτρησης
