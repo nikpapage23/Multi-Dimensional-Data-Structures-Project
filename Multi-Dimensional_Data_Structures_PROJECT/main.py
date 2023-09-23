@@ -52,9 +52,9 @@ def lsh_test(lst, thrs, buc):
     # η μετρική ομοιότητας που θα χρησιμοποιηθεί 
     prefferedSimilarity = cosine_similarity
 
-    # γειτονικά σημεία με cosine similarity μεγαλύτερο από το user defined threshold
+    # γειτονικά σημεία με similarity μεγαλύτερο από το user defined threshold
     actual_neigbors = lsh.neighbors(thrs, prefferedSimilarity)
-    print(str(len(actual_neigbors))+" candidates with at least "+str(int(thrs*100))+"% "+prefferedSimilarity.__name__+" similarity")
+    print(str(len(actual_neigbors))+" candidates with at least "+str(int(thrs*100))+" % similarity using "+prefferedSimilarity.__name__)
     print(actual_neigbors, end='\n\n')
 
 def stemming_and_stopwords(df):
