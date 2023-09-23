@@ -1,7 +1,7 @@
 from numpy.linalg import norm
 from numpy import dot, zeros
 
-    # συνάρτηση κατασκευής kshingle
+# συνάρτηση κατασκευής kshingle
 def kshingle(text, k):
 
     shingle_set = []
@@ -11,7 +11,7 @@ def kshingle(text, k):
     
     return set(shingle_set)
 
-    # συνάρτηση κατασκευής one hot 
+# συνάρτηση κατασκευής one hot 
 def one_hot_encoding(vocab, sent):
 
     one_hot = zeros(shape=(len(vocab),), dtype=int)
@@ -27,6 +27,7 @@ def cosine_similarity(u, v):
         return 0.
     else:
         return round(dot(u,v) / (norm(u)*norm(v)), 3)
-    # ομοιότητα jaccard
+    
+# ομοιότητα jaccard
 def jaccard(v, u):
     return round(len(set(v) & set(u)) / len(set(v) | set(u)), 3)
