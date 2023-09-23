@@ -63,8 +63,8 @@ def stemming_and_stopwords(df):
     # αφαίρεση αριθμών
     df['education'] = df['education'].str.replace(r'\d+', '', regex=True)
     # αφαίρεση παρενθέσεων
-    df['education'] = df['education'].str.replace(r'(', '', regex=True)
-    df['education'] = df['education'].str.replace(r')', '', regex=True)
+    df['education'] = df['education'].str.replace(r'\(', '', regex=True)
+    df['education'] = df['education'].str.replace(r'\)', '', regex=True)
 
 def main_app(lsh_threshold, min_letter, max_letter, num_awards, user_choice):
     start_time = time.time()
