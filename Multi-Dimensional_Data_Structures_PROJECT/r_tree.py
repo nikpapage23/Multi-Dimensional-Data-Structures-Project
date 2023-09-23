@@ -1,6 +1,6 @@
 import pandas as pd
 from rtree import index
-from main import letter_normalization
+from auxiliary import letter_normalization
 
 class RTree:
     def __init__(self):

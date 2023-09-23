@@ -4,7 +4,7 @@ from range_tree import *
 from quad_tree import *
 from lsh.lsh import *
 from lsh.tools import *
-from beautifultable import BeautifulTable
+from auxiliary import display_results
 import warnings
 import time
 warnings.filterwarnings("ignore", category=FutureWarning)
@@ -12,22 +12,6 @@ from numpy import stack
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 
-
-def letter_normalization(letter):
-    return ord(letter.upper()) - 65
-
-
-def display_results(results_list):
-    table = BeautifulTable(maxwidth=150)
-    table.column_headers = ["Surname", "Awards", "Education"]
-
-    sorted_list = sorted(results_list, key=lambda x: x["surname"])
-
-    for result in sorted_list:
-        table.append_row([result["surname"], result["awards"], result["education"]])
-
-    print(table)
-    print(str(len(table))+" results")
 
 def lsh_test(lst, thrs, buc):
     print(str(buc)+" buckets")

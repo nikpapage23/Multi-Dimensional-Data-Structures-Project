@@ -1,5 +1,5 @@
 import pandas as pd
-from main import letter_normalization
+from auxiliary import letter_normalization
 
 
 # Αντιπροσωπεύει ένα σημείο στον δισδιάστατο (2D) χώρο,
