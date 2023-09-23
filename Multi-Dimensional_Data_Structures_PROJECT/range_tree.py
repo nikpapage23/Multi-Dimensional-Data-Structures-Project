@@ -1,4 +1,5 @@
 import pandas as pd
+from main import letter_normalization
 
 '''
 Η λογική ενός δισδιάστατου (2D) Range Tree είναι ότι για μία δοθείσα συλλογή από σημεία P,
@@ -243,8 +244,8 @@ def build_range_tree():
 
 def query_range_tree(range_tree, min_letter, max_letter, num_awards):
     # Υπολογισμός των αριθμητικών τιμών του ελάχιστου και του μέγιστου γράμματος
-    min_letter = ord(min_letter) - 65
-    max_letter = ord(max_letter) - 65
+    min_letter = letter_normalization(min_letter)
+    max_letter = letter_normalization(max_letter)
 
     # Ορισμός των διαστημάτων τόσο στη συντεταγμένη x όσο και στη y, πάνω στα οποία θα γίνει η αναζήτηση
     x_range = (min_letter, max_letter)

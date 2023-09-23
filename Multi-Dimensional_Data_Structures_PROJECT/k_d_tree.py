@@ -1,4 +1,5 @@
 import pandas as pd
+from main import letter_normalization
 
 class Node:
     def __init__(self, point, axis):
@@ -83,8 +84,8 @@ def build_kdtree():
 
 def query_kdtree(kdtree, min_letter, max_letter, num_awards):
     # Υπολογισμός των αριθμητικών τιμών του ελάχιστου και του μέγιστου γράμματος
-    min_letter = ord(min_letter) - 65
-    max_letter = ord(max_letter) - 65
+    min_letter = letter_normalization(min_letter)
+    max_letter = letter_normalization(max_letter)
 
     # (x1, y1, x2, y2)
     rectangle = (min_letter, num_awards, max_letter, float('inf'))
