@@ -50,7 +50,7 @@ def lsh_test(lst, thrs, buc):
     lsh = LSH(n_func, 5).fit(one_hot_matrix, buc)
 
     # η μετρική ομοιότητας που θα χρησιμοποιηθεί 
-    prefferedSimilarity = cosine_similarity
+    prefferedSimilarity = jaccard_binary
 
     # γειτονικά σημεία με similarity μεγαλύτερο από το user defined threshold
     actual_neigbors = lsh.neighbors(thrs, prefferedSimilarity)

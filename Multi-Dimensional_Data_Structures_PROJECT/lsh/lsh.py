@@ -125,25 +125,6 @@ class LSH:
         return self
 
 
-    # Βρίσκει όλα τα ζεύγη candidates στο μητρώο Μ
-    def cands(self):
-
-      candidates = set()
-
-      # Βρίσκει τα pairs για κάθε band
-      for hash_table in self.hash_tables:
-
-        for bucket in hash_table:
-
-          # Αν το bucket έχει παραπάνω από μια στήλη
-          if len(bucket) > 1:
-            # Βάλε όλα τα ζεύγη στο candidates set
-            candidates.update(combinations(bucket, 2))
-            
-      # Return the candidate column pairs
-      return candidates
-
-
     def _get_candidates(self):
         # Ένα σετ που αποθηκεύει τα candidate ζεύγη
         candidates = [set() for _ in range(self.num_buckets)]
