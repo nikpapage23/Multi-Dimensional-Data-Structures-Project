@@ -1,5 +1,5 @@
 import pandas as pd
-from main import letter_normalization
+from auxiliary import letter_normalization
 
 '''
 Η λογική ενός δισδιάστατου (2D) Range Tree είναι ότι για μία δοθείσα συλλογή από σημεία P,

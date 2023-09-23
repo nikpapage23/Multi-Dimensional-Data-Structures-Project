@@ -1,16 +1,20 @@
 import pandas as pd
-from main import letter_normalization
+from auxiliary import letter_normalization
+
+'''
+Στα K-D Trees, για K=2, κάθε κόμβος αναπαριστά ένα δισδιάστατο σημείο.
+'''
 
 class Node:
     def __init__(self, point, axis):
         self.point = point
-        self.left = None
-        self.right = None
+        self.left = None    # ο αριστερός κόμβος
+        self.right = None   # ο δεξιός κόβμος
         self.axis = axis
 
 class KDTree:
     def __init__(self):
-        self.root = None
+        self.root = None    # η ρίζα του δέντρου
 
     def build(self, points, depth=0):
         if not points:
