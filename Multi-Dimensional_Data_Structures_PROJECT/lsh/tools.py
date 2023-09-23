@@ -24,3 +24,6 @@ def cosine_similarity(u, v):
         return 0.
     else:
         return round(dot(u,v) / (norm(u)*norm(v)), 3)
+    
+def jaccard(v, u):
+    return round(len(set(v) & set(u)) / len(set(v) | set(u)), 3)
