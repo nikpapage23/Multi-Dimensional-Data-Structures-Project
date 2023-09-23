@@ -1,6 +1,6 @@
 import pandas as pd
 from rtree import index
-
+from main import letter_normalization
 
 class RTree:
     def __init__(self):
@@ -33,8 +33,10 @@ def build_rtree():
 
 def query_rtree(rtree, min_letter, max_letter, num_awards):
     # Υπολογισμός των αριθμητικών τιμών του ελάχιστου και του μέγιστου γράμματος
-    min_letter = ord(min_letter) - 65
-    max_letter = ord(max_letter) - 65
+
+    min_letter = letter_normalization(min_letter)
+    max_letter = letter_normalization(max_letter)
+
     query_bbox = (min_letter, num_awards, max_letter, float('inf'))
     matches = rtree.search(query_bbox)  # Αναζήτηση στο R-tree με βάση το δοθέν query_bbox
 

@@ -1,4 +1,5 @@
 import pandas as pd
+from main import letter_normalization
 
 
 # Αντιπροσωπεύει ένα σημείο στον δισδιάστατο (2D) χώρο,
@@ -152,8 +153,8 @@ def build_quad_tree():
 
 def query_quad_tree(tree, min_letter, max_letter, num_awards):
     # Υπολογισμός των αριθμητικών τιμών του ελάχιστου και του μέγιστου γράμματος
-    min_letter = ord(min_letter) - 65
-    max_letter = ord(max_letter) - 65
+    min_letter = letter_normalization(min_letter)
+    max_letter = letter_normalization(max_letter)
 
     # Εύρεση του μέγιστου αριθμού βραβείων που υπάρχει (max_y)
     points = read_data()

@@ -12,6 +12,11 @@ from numpy import stack
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 
+
+def letter_normalization(letter):
+    return ord(letter.upper()) - 65
+
+
 def display_results(results_list):
     table = BeautifulTable(maxwidth=150)
     table.column_headers = ["Surname", "Awards", "Education"]
@@ -49,13 +54,11 @@ def lsh_test(lst, thrs, buc):
     # δημιουργία του LSH μοντέλου με n_func και buc
     lsh = LSH(n_func, 5).fit(one_hot_matrix, buc)
 
-    # η μετρική ομοιότητας που θα χρησιμοποιηθεί 
-    prefferedSimilarity = jaccard_binary
-
-    # γειτονικά σημεία με similarity μεγαλύτερο από το user defined threshold
-    actual_neigbors = lsh.neighbors(thrs, prefferedSimilarity)
-    print(str(len(actual_neigbors))+" candidates with at least "+str(int(thrs*100))+" % similarity using "+prefferedSimilarity.__name__)
+    # γειτονικά σημεία με cosine similarity μεγαλύτερο από το user defined threshold
+    actual_neigbors = lsh.neighbors(thrs, cosine_similarity)
+    print(str(len(actual_neigbors))+" candidates with at least "+str(int(thrs*100))+"%"+" similarity")
     print(actual_neigbors, end='\n\n')
+
 
 def stemming_and_stopwords(df):
     stop_words = set(stopwords.words('english'))
@@ -66,8 +69,9 @@ def stemming_and_stopwords(df):
     # αφαίρεση αριθμών
     df['education'] = df['education'].str.replace(r'\d+', '', regex=True)
     # αφαίρεση παρενθέσεων
-    df['education'] = df['education'].str.replace(r'(', '', regex=True)
-    df['education'] = df['education'].str.replace(r')', '', regex=True)
+    df['education'] = df['education'].str.replace(r'\(', '', regex=True)
+    df['education'] = df['education'].str.replace(r'\)', '', regex=True)
+
 
 def main_app(lsh_threshold, min_letter, max_letter, num_awards, user_choice):
     start_time = time.time()
@@ -104,6 +108,7 @@ if __name__ == '__main__':
     lsh_threshold = float(input("Εισάγετε ελάχιστο ποσοστό ομοιότητας (0 - 1): "))
     min_letter, max_letter = input("Εισάγετε διάστημα ονομάτων στη μορφή X,X: ").upper().split(',')
     num_awards = int(input("Εισάγετε ελάχιστο αριθμό βραβείων: "))
+
     # Επιλογή πολυδιάστατης δομής για αποθήκευση των δεδομένων
     print("\n1. k-d tree\n2. Quad tree\n3. Range tree\n4. R-tree")
     user_choice = int(input("Επιλέξτε δομή: "))
