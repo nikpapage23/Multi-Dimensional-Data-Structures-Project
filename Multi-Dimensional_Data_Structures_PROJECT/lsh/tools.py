@@ -1,6 +1,6 @@
 from numpy.linalg import norm
 from numpy import dot, zeros
-
+import numpy as np
 # συνάρτηση κατασκευής kshingle
 def kshingle(text, k):
 
@@ -28,6 +28,17 @@ def cosine_similarity(u, v):
     else:
         return round(dot(u,v) / (norm(u)*norm(v)), 3)
     
-# ομοιότητα jaccard
-def jaccard(v, u):
-    return round(len(set(v) & set(u)) / len(set(v) | set(u)), 3)
+# ομοιότητα jaccard binary
+def jaccard_binary(x,y):
+    """A function for finding the similarity between two binary vectors"""
+    intersection = np.logical_and(x, y)
+    union = np.logical_or(x, y)
+    similarity = round(intersection.sum() / float(union.sum()), 3)
+    return similarity
+
+# ομοιότητα jaccard set
+def jaccard_set(list1, list2):
+    """Define Jaccard Similarity function for two sets"""
+    intersection = len(list(set(list1).intersection(list2)))
+    union = (len(list1) + len(list2)) - intersection
+    return float(intersection) / union

@@ -49,9 +49,12 @@ def lsh_test(lst, thrs, buc):
     # δημιουργία του LSH μοντέλου με n_func και buc
     lsh = LSH(n_func, 5).fit(one_hot_matrix, buc)
 
+    # η μετρική ομοιότητας που θα χρησιμοποιηθεί 
+    prefferedSimilarity = cosine_similarity
+
     # γειτονικά σημεία με cosine similarity μεγαλύτερο από το user defined threshold
-    actual_neigbors = lsh.neighbors(thrs, cosine_similarity)
-    print(str(len(actual_neigbors))+" candidates with at least "+str(int(thrs*100))+"%"+" similarity")
+    actual_neigbors = lsh.neighbors(thrs, prefferedSimilarity)
+    print(str(len(actual_neigbors))+" candidates with at least "+str(int(thrs*100))+"% "+prefferedSimilarity.__name__+" similarity")
     print(actual_neigbors, end='\n\n')
 
 def stemming_and_stopwords(df):
@@ -101,7 +104,6 @@ if __name__ == '__main__':
     lsh_threshold = float(input("Εισάγετε ελάχιστο ποσοστό ομοιότητας (0 - 1): "))
     min_letter, max_letter = input("Εισάγετε διάστημα ονομάτων στη μορφή X,X: ").upper().split(',')
     num_awards = int(input("Εισάγετε ελάχιστο αριθμό βραβείων: "))
-
     # Επιλογή πολυδιάστατης δομής για αποθήκευση των δεδομένων
     print("\n1. k-d tree\n2. Quad tree\n3. Range tree\n4. R-tree")
     user_choice = int(input("Επιλέξτε δομή: "))
