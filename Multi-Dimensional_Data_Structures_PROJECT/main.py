@@ -38,9 +38,12 @@ def lsh_test(lst, thrs, buc):
     # δημιουργία του LSH μοντέλου με n_func και buc
     lsh = LSH(n_func, 5).fit(one_hot_matrix, buc)
 
-    # γειτονικά σημεία με cosine similarity μεγαλύτερο από το user defined threshold
-    actual_neigbors = lsh.neighbors(thrs, cosine_similarity)
-    print(str(len(actual_neigbors))+" candidates with at least "+str(int(thrs*100))+"%"+" similarity")
+    # η μετρική ομοιότητας που θα χρησιμοποιηθεί 
+    prefferedSimilarity = jaccard_binary
+
+    # γειτονικά σημεία με similarity μεγαλύτερο από το user defined threshold
+    actual_neigbors = lsh.neighbors(thrs, prefferedSimilarity)
+    print(str(len(actual_neigbors))+" candidates with at least "+str(int(thrs*100))+" % similarity using "+prefferedSimilarity.__name__)
     print(actual_neigbors, end='\n\n')
 
 
