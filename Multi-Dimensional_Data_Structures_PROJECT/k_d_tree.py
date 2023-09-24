@@ -1,21 +1,20 @@
 import pandas as pd
 from auxiliary import letter_normalization
 
-'''
-Στα K-D Trees, για K=2, κάθε κόμβος αναπαριστά ένα δισδιάστατο σημείο.
-'''
 
 class Node:
     def __init__(self, point, axis):
-        self.point = point
+        self.point = point  # η πληροφορία που αποθηκεύεται στον κόμβο
         self.left = None    # ο αριστερός κόμβος
         self.right = None   # ο δεξιός κόβμος
-        self.axis = axis
+        self.axis = axis    # αναπαριστά το x ή y άξονα
 
 class KDTree:
     def __init__(self):
         self.root = None    # η ρίζα του δέντρου
 
+    # Κατασκευάζει το δέντρο προσθέτοντας τα points, τα οποία διαχωρίζει
+    # στους άξονες μέσω του axis. Το depth αποθηκεύει το βάθος του δέντρου
     def build(self, points, depth=0):
         if not points:
             return None
@@ -28,11 +27,12 @@ class KDTree:
         node.left = self.build(points[:median], depth + 1)
         node.right = self.build(points[median + 1:], depth + 1)
 
-        return node
+        return node   # επιστροφή ρίζας δέντρου
 
     def insert(self, point):
-        self.root = self._insert(self.root, point)
+        self.root = self._insert(self.root, point) # ιδιωτική μέθοδος
 
+    # αναδρομικό insert ενός νέου point στο δέντρο
     def _insert(self, root, point, depth=0):
         if root is None:
             return Node(point, depth % 2)
@@ -47,6 +47,8 @@ class KDTree:
 
         return root
 
+    # Αναζήτηση διαστήματος στο δέντρο. Χρησιμοποιείται η μεταβλητή
+    # rect = x1, y1, x2, y2 ως το διάστημα αναζήτησης.
     def query(self, rect, node=None):
         if node is None:
             node = self.root
@@ -67,6 +69,7 @@ class KDTree:
 
         return results
 
+
 def build_kdtree():
     df = pd.read_csv("scientists_data.csv")
     points = []  # x , y = (int)surname, awards
@@ -75,7 +78,7 @@ def build_kdtree():
     # βάσει της αριθμητικής τιμής του πρώτου γράμματος του επωνύμου και του
     # αριθμού των βραβείων αντίστοιχα, και εισάγουμε το σημείο στη λίστα points.
     for i in range(len(df)):
-        x = ord(df.iloc[i]['surname'][0]) - 65
+        x = letter_normalization(df.iloc[i]['surname'][0])
         y = df.iloc[i]['awards']
         data = (df.iloc[i]['surname'], df.iloc[i]['awards'], df.iloc[i]['education'])
         points.append((x, y, i))

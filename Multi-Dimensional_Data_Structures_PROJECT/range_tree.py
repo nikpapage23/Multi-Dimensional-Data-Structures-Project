@@ -234,7 +234,7 @@ def build_range_tree():
     # βάσει της αριθμητικής τιμής του πρώτου γράμματος του επωνύμου και του
     # αριθμού των βραβείων αντίστοιχα, και εισάγουμε το σημείο στη λίστα points.
     for i in range(len(df)):
-        x = ord(df.iloc[i]['surname'][0]) - 65
+        x = letter_normalization(df.iloc[i]['surname'][0])
         y = df.iloc[i]['awards']
         points.append((x, y, i))
 

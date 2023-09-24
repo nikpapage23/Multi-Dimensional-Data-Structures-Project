@@ -11,7 +11,7 @@ class RTree:
         self.idx.insert(item_id, (x, y, x, y))
         self.data_list.append(item)
 
-    def search(self, query_bbox):
+    def search(self, queαry_bbox):
         return list(self.idx.intersection(query_bbox))
 
 
@@ -23,7 +23,7 @@ def build_rtree():
     # βάσει της αριθμητική τιμής του πρώτου γράμματος του επωνύμου και του
     # αριθμού των βραβείων αντίστοιχα, και εισάγουμε το στοιχείο στο R-tree.
     for i in range(len(df)):
-        x = ord(df.iloc[i]['surname'][0]) - 65
+        x = letter_normalization(df.iloc[i]['surname'][0])
         y = df.iloc[i]['awards']
         data = (df.iloc[i]['surname'], df.iloc[i]['awards'], df.iloc[i]['education'])
         rtree.insert(i, data, x, y)  # Εισαγωγή του στοιχείου στο R-tree
