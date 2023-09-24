@@ -11,7 +11,7 @@ class RTree:
         self.idx.insert(item_id, (x, y, x, y))
         self.data_list.append(item)
 
-    def search(self, queαry_bbox):
+    def search(self, query_bbox):
         return list(self.idx.intersection(query_bbox))
 
 
