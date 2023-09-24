@@ -1,5 +1,6 @@
 from beautifultable import BeautifulTable
 
+
 def letter_normalization(letter):
     return ord(letter.upper()) - 65
 
@@ -13,5 +14,9 @@ def display_results(results_list):
     for result in sorted_list:
         table.append_row([result["surname"], result["awards"], result["education"]])
 
-    print(table)
-    print(str(len(table))+" results")
+    return table
+
+
+def save_results(results_list):
+    with open("results.txt", "w", encoding="utf-8") as output_file:
+        output_file.write(display_results(results_list).get_string())

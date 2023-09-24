@@ -13,8 +13,8 @@ for i in range(10):
     # τυχαίος χαρακτήρας στο διάστημα [min_letter + 1, Z]
     max_letter = chr(random.randint(ord(min_letter) + 1, ord('Z')))
     letter_range = min_letter + ',' + max_letter
-    num_awards = random.randint(0, 10)  # τυχαίος ακέραιος αριθμός στο διάστημα [0, 10]
-    lsh_threshold = round(random.uniform(0.1, 0.7), 2)  # τυχαίος δεκαδικός αριθμός στο διάστημα [0.1, 0.7]
+    num_awards = random.randint(0, 6)  # τυχαίος ακέραιος αριθμός στο διάστημα [0, 6]
+    lsh_threshold = round(random.uniform(0.4, 0.65), 2)  # τυχαίος δεκαδικός αριθμός στο διάστημα [0.4, 0.7]
 
     for choice in range(1, 5):
         print(letter_range, num_awards, lsh_threshold, choice)

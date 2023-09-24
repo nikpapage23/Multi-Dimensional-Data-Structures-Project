@@ -3,27 +3,16 @@ from random import shuffle
 from itertools import combinations
 from copy import deepcopy
 
+
 class MinHash:
     def __init__(self, one_hot_matrix, nfuncs):
-
-        # one hot μητρώο
-        self.one_hot_matrix = one_hot_matrix
-
-        # διαστάσεις του μητρώου
-        self.shape = one_hot_matrix.shape
-        
-        # κάθετη διάσταση του signature του Μ
-        self.nfuncs = nfuncs
-
-        # δημιουργία hash functions
-        self.functions = self.build_functions(nfuncs)
-
-        # signatures
-        self.sign_matrix = None
-
+        self.one_hot_matrix = one_hot_matrix    # one hot μητρώο
+        self.shape = one_hot_matrix.shape   # διαστάσεις του μητρώου
+        self.nfuncs = nfuncs    # κάθετη διάσταση του signature του Μ
+        self.functions = self.build_functions(nfuncs)   # δημιουργία hash functions
+        self.sign_matrix = None     # signatures
 
     def _hash(self):
-
         # one_hot indices διάνυσμα
         hash_indices = list(range(1, self.shape[0]+1))
 
@@ -32,30 +21,24 @@ class MinHash:
 
         return hash_indices
 
-
     # επιστρέφει μια δισδιάστατη λίστα των μεταθέσεων δεικτών
     def build_functions(self, nfuncs):
         return [self._hash() for _ in range(nfuncs)]
 
     # παίρνει ως όρισμα ένα one hot διάνυσμα και κατασκευάζει ένα compressed signature διάνυσμα  
     def _signature_matrix(self):
-
         sign_matrix = empty(shape=(self.nfuncs, self.shape[1]), dtype=int)
 
         for i, func in enumerate(self.functions):
-
             perm_sign = zeros(self.shape[1])
-
             j = 1
             
             while (perm_sign == 0).any():
-                
                 idx = func.index(j)
                 row = self.one_hot_matrix[idx]
 
                 mask = (perm_sign == 0) & (row == 1)
                 perm_sign[mask] = j
-
                 j += 1
                 
             sign_matrix[i] = perm_sign
@@ -67,17 +50,13 @@ class MinHash:
 
 class LSH:
     def __init__(self, nfuncs, bands):
-
-        # μέγεθος του shingle
-        self.nfuncs = nfuncs
+        self.nfuncs = nfuncs    # μέγεθος του shingle
+        self.bands = bands  # ορίζει το μέγεθος του band
+        self.hash_tables = []   # μια λίστα που θα περιέχει τα hash tables
+        self.num_buckets = None
+        self.hash_method = None
         
-        # ορίζει το μέγεθος του band
-        self.bands = bands
-        
-        # μια λίστα που θα περιέχει τα hash tables
-        self.hash_tables = []
-        
-    #μέθοδος για χα χωρίσει τα signature μητρώα σε bands
+    # μέθοδος για να χωρίσει τα signature μητρώα σε bands
     def partition_into_bands(self, sm):
 
         # ελέγχει αν το signature μπορεί να χωριστεί στα bands
@@ -93,20 +72,18 @@ class LSH:
     
     # Κάνε hash κάθε band του μητρώου Μ σε ένα hash table με k buckets
     def fit(self, data, num_buckets):
-
         self.num_buckets = num_buckets
         
         # δημιουργεί το minhash αντικείμενο
-        self.hash_mehod = MinHash(data, nfuncs=self.nfuncs)
+        self.hash_method = MinHash(data, nfuncs=self.nfuncs)
 
-        # η ταυτότητα κάθε αρχείου αναπαρίστατει από τη στήλη
-        sign_matrix = self.hash_mehod._signature_matrix()
+        # η ταυτότητα κάθε αρχείου αναπαρίσταται από τη στήλη
+        sign_matrix = self.hash_method._signature_matrix()
 
         # χωρίζει σε bands
         bands = self.partition_into_bands(sign_matrix)
 
         for band in bands:
-
             # φτιάχνει ένα κενό hash table με k buckets
             hash_table = [set() for _ in range(self.num_buckets)]
 
@@ -124,7 +101,6 @@ class LSH:
 
         return self
 
-
     def _get_candidates(self):
         # Ένα σετ που αποθηκεύει τα candidate ζεύγη
         candidates = [set() for _ in range(self.num_buckets)]
@@ -133,29 +109,26 @@ class LSH:
         for hash_table in self.hash_tables:
 
             for i, bucket in enumerate(hash_table):
-
-            # Αν το bucket έχει παραπάνω από μια στήλη
+                # Αν το bucket έχει παραπάνω από μια στήλη
                 if len(bucket) > 1:
                     # Βάλε όλα τα ζεύγη στο candidates set
                     candidates[i].update(combinations(bucket, 2))
 
         # Return the candidate column pairs
         return candidates  
-      
 
     def neighbors(self, similar, dist_func):
-        
         cands = set().union(*self._get_candidates())
-        print(str(len(cands))+" candidates")
-        actual_neigbors = {}
+        actual_neighbors = {}
 
         # for each pair in each bucket of each band
         for c1, c2 in cands:
 
             # βρες το similarity
-            sim = dist_func(self.hash_mehod.one_hot_matrix[:, c1], self.hash_mehod.one_hot_matrix[:, c2])
+            sim = dist_func(self.hash_method.one_hot_matrix[:, c1], self.hash_method.one_hot_matrix[:, c2])
             
             # αν είναι πάνω από το threshold
-            if sim >= similar: actual_neigbors[c1, c2] = sim 
+            if sim >= similar:
+                actual_neighbors[c1, c2] = sim
 
-        return actual_neigbors
+        return actual_neighbors

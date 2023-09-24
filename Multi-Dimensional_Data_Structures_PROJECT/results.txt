@@ -1,0 +1,45 @@
++-----------+--------+-------------------------------------------------------------------------------------------------------------------------------+
+|  Surname  | Awards |                                                           Education                                                           |
++-----------+--------+-------------------------------------------------------------------------------------------------------------------------------+
+|   Khan    |   10   | Khan was a Bright Sparks scholar and received his PhD degree in Computer Science from University of Malaya.[14] He received h |
+|           |        | is Masters and Bachelor's degree (with honors) in Computer Science from COMSATS University under COMSATS scholarship. He has  |
+|           |        |      also attended a summer camp on Advance Wireless Networks at Technische Universität Ilmenau under DAAD scholarship.       |
++-----------+--------+-------------------------------------------------------------------------------------------------------------------------------+
+| Kleinrock |   5    | Leonard Kleinrock was born  in New York City on June 13, 1934, to a Jewish family,[3] and  graduated from the noted Bronx Hig |
+|           |        | h School of Science in 1951. He received a Bachelor of Electrical Engineering degree in 1957 from the City College of New Yor |
+|           |        | k, and a master's degree and a doctorate (Ph.D.) in electrical engineering and computer science from the Massachusetts Instit |
+|           |        | ute of Technology in 1959 and 1963 respectively. He then joined the faculty at the University of California at Los Angeles (U |
+|           |        | CLA), where he remains to the present day; during 1991–1995 he served as the chairman of the Computer Science Department ther |
+|           |        |                                                             e.[4]                                                             |
++-----------+--------+-------------------------------------------------------------------------------------------------------------------------------+
+|   Knuth   |   13   | Knuth received a scholarship in physics to the Case Institute of Technology (now part of Case Western Reserve University) in  |
+|           |        | Cleveland, Ohio, enrolling in 1956.[10] He also joined the Beta Nu Chapter of the Theta Chi fraternity. While studying physic |
+|           |        | s at Case, Knuth was introduced to the IBM 650, an early commercial computer. After reading the computer's manual, Knuth deci |
+|           |        | ded to rewrite the assembly and compiler code for the machine used in his school, because he believed he could do it better.[ |
+|           |        | 11] In 1958, Knuth created a program to help his school's basketball team win their games.[12] He assigned "values" to player |
+|           |        | s in order to gauge their probability of scoring points, a novel approach that Newsweek and CBS Evening News later reported o |
+|           |        | n.[11] Knuth was one of the founding editors of the Case Institute's Engineering and Science Review, which won a national awa |
+|           |        | rd as best technical magazine in 1959.[13][14] He then switched from physics to mathematics, and received two degrees from Ca |
+|           |        | se in 1960:[10] his bachelor of science, and simultaneously a master of science by a special award of the faculty, who consid |
+|           |        | ered his work exceptionally outstanding.[4][11] In 1963, with mathematician Marshall Hall as his adviser,[2] he earned a PhD  |
+|           |        | in mathematics from the California Institute of Technology for a thesis entitled Finite Semifields and Projective Planes.[15] |
++-----------+--------+-------------------------------------------------------------------------------------------------------------------------------+
+|  Koller   |   5    | Koller received a bachelor's degree from the Hebrew University of Jerusalem in 1985, at the age of 17, and a master's degree  |
+|           |        | from the same institution in 1986, at the age of 18.[11] She completed her PhD at Stanford in 1993 under the supervision of J |
+|           |        |                                                       oseph Halpern.[2]                                                       |
++-----------+--------+-------------------------------------------------------------------------------------------------------------------------------+
+|  Lamport  |   6    | Lamport was born into a Jewish family in Brooklyn, New York, the son of Benjamin and Hannah Lamport (née Lasser).[citation ne |
+|           |        | eded] His father was an immigrant from Volkovisk in the Russian Empire (now Vawkavysk, Belarus)[10] and his mother was an imm |
+|           |        | igrant from the Austro-Hungarian Empire, now southeastern Poland. A graduate of Bronx High School of Science, Lamport receive |
+|           |        | d a B.S. in mathematics from the Massachusetts Institute of Technology in 1960, followed by M.A. (1963) and Ph.D. (1972) degr |
+|           |        | ees in mathematics from Brandeis University.[11] His dissertation, The analytic Cauchy problem with singular data, is about s |
+|           |        |                                 ingularities in analytic partial differential equations.[12]                                  |
++-----------+--------+-------------------------------------------------------------------------------------------------------------------------------+
+|  Lampson  |   6    | After graduating from the Lawrenceville School (where in 2009 he was awarded the Aldo Leopold Award, also known as the Lawren |
+|           |        | ceville Medal, Lawrenceville's highest award to alumni), Lampson received an A.B. in physics (magna cum laude with highest ho |
+|           |        | nors in the discipline) from Harvard University in 1964 and a PhD in electrical engineering and computer science from the Uni |
+|           |        |                                           versity of California, Berkeley in 1967.                                            |
++-----------+--------+-------------------------------------------------------------------------------------------------------------------------------+
+|   Lynch   |   7    | Lynch was born in Brooklyn, and her academic training was in mathematics. She attended Brooklyn College and MIT, where she re |
+|           |        |                           ceived her Ph.D. in 1972 under the supervision of Albert R. Meyer.[2][3]                            |
++-----------+--------+-------------------------------------------------------------------------------------------------------------------------------+
