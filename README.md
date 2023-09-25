@@ -30,14 +30,12 @@ To deploy this project run
   python experiments.py
 ```
 
+## Screenshots
+
+![Experiments](https://github.com/nikpapage23/Multi-Dimensional-Data-Structures-Project/blob/main/Multi-Dimensional_Data_Structures_PROJECT/screenshots/Figure_1.png)
 
 ## Authors
 
 - [@nikpapage23](https://github.com/nikpapage23)
 - [@alex-xiarchos](https://github.com/alex-xiarchos)
 - [@manosmin](https://github.com/manosmin)
-
-## Screenshots
-
-![Experiments](https://github.com/nikpapage23/Multi-Dimensional-Data-Structures-Project/blob/main/Multi-Dimensional_Data_Structures_PROJECT/screenshots/Figure_1.png)
-
