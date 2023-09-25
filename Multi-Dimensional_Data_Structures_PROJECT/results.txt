@@ -1,45 +1,398 @@
-+-----------+--------+-------------------------------------------------------------------------------------------------------------------------------+
-|  Surname  | Awards |                                                           Education                                                           |
-+-----------+--------+-------------------------------------------------------------------------------------------------------------------------------+
-|   Khan    |   10   | Khan was a Bright Sparks scholar and received his PhD degree in Computer Science from University of Malaya.[14] He received h |
-|           |        | is Masters and Bachelor's degree (with honors) in Computer Science from COMSATS University under COMSATS scholarship. He has  |
-|           |        |      also attended a summer camp on Advance Wireless Networks at Technische Universität Ilmenau under DAAD scholarship.       |
-+-----------+--------+-------------------------------------------------------------------------------------------------------------------------------+
-| Kleinrock |   5    | Leonard Kleinrock was born  in New York City on June 13, 1934, to a Jewish family,[3] and  graduated from the noted Bronx Hig |
-|           |        | h School of Science in 1951. He received a Bachelor of Electrical Engineering degree in 1957 from the City College of New Yor |
-|           |        | k, and a master's degree and a doctorate (Ph.D.) in electrical engineering and computer science from the Massachusetts Instit |
-|           |        | ute of Technology in 1959 and 1963 respectively. He then joined the faculty at the University of California at Los Angeles (U |
-|           |        | CLA), where he remains to the present day; during 1991–1995 he served as the chairman of the Computer Science Department ther |
-|           |        |                                                             e.[4]                                                             |
-+-----------+--------+-------------------------------------------------------------------------------------------------------------------------------+
-|   Knuth   |   13   | Knuth received a scholarship in physics to the Case Institute of Technology (now part of Case Western Reserve University) in  |
-|           |        | Cleveland, Ohio, enrolling in 1956.[10] He also joined the Beta Nu Chapter of the Theta Chi fraternity. While studying physic |
-|           |        | s at Case, Knuth was introduced to the IBM 650, an early commercial computer. After reading the computer's manual, Knuth deci |
-|           |        | ded to rewrite the assembly and compiler code for the machine used in his school, because he believed he could do it better.[ |
-|           |        | 11] In 1958, Knuth created a program to help his school's basketball team win their games.[12] He assigned "values" to player |
-|           |        | s in order to gauge their probability of scoring points, a novel approach that Newsweek and CBS Evening News later reported o |
-|           |        | n.[11] Knuth was one of the founding editors of the Case Institute's Engineering and Science Review, which won a national awa |
-|           |        | rd as best technical magazine in 1959.[13][14] He then switched from physics to mathematics, and received two degrees from Ca |
-|           |        | se in 1960:[10] his bachelor of science, and simultaneously a master of science by a special award of the faculty, who consid |
-|           |        | ered his work exceptionally outstanding.[4][11] In 1963, with mathematician Marshall Hall as his adviser,[2] he earned a PhD  |
-|           |        | in mathematics from the California Institute of Technology for a thesis entitled Finite Semifields and Projective Planes.[15] |
-+-----------+--------+-------------------------------------------------------------------------------------------------------------------------------+
-|  Koller   |   5    | Koller received a bachelor's degree from the Hebrew University of Jerusalem in 1985, at the age of 17, and a master's degree  |
-|           |        | from the same institution in 1986, at the age of 18.[11] She completed her PhD at Stanford in 1993 under the supervision of J |
-|           |        |                                                       oseph Halpern.[2]                                                       |
-+-----------+--------+-------------------------------------------------------------------------------------------------------------------------------+
-|  Lamport  |   6    | Lamport was born into a Jewish family in Brooklyn, New York, the son of Benjamin and Hannah Lamport (née Lasser).[citation ne |
-|           |        | eded] His father was an immigrant from Volkovisk in the Russian Empire (now Vawkavysk, Belarus)[10] and his mother was an imm |
-|           |        | igrant from the Austro-Hungarian Empire, now southeastern Poland. A graduate of Bronx High School of Science, Lamport receive |
-|           |        | d a B.S. in mathematics from the Massachusetts Institute of Technology in 1960, followed by M.A. (1963) and Ph.D. (1972) degr |
-|           |        | ees in mathematics from Brandeis University.[11] His dissertation, The analytic Cauchy problem with singular data, is about s |
-|           |        |                                 ingularities in analytic partial differential equations.[12]                                  |
-+-----------+--------+-------------------------------------------------------------------------------------------------------------------------------+
-|  Lampson  |   6    | After graduating from the Lawrenceville School (where in 2009 he was awarded the Aldo Leopold Award, also known as the Lawren |
-|           |        | ceville Medal, Lawrenceville's highest award to alumni), Lampson received an A.B. in physics (magna cum laude with highest ho |
-|           |        | nors in the discipline) from Harvard University in 1964 and a PhD in electrical engineering and computer science from the Uni |
-|           |        |                                           versity of California, Berkeley in 1967.                                            |
-+-----------+--------+-------------------------------------------------------------------------------------------------------------------------------+
-|   Lynch   |   7    | Lynch was born in Brooklyn, and her academic training was in mathematics. She attended Brooklyn College and MIT, where she re |
-|           |        |                           ceived her Ph.D. in 1972 under the supervision of Albert R. Meyer.[2][3]                            |
-+-----------+--------+-------------------------------------------------------------------------------------------------------------------------------+
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|   Surname   | Awards |                                                          Education                                                          |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|    Allen    |   6    | Allen grew up on a farm in Peru, New York, near Lake Champlain, as the oldest of six children. Her father was a farmer, and |
+|             |        |  her mother an elementary schoolteacher.[9] Her early elementary education took place in a one-room school house a mile awa |
+|             |        | y from her home, and she later attended a local high school.[10] She graduated from The New York State College for Teachers |
+|             |        |  (now part of the University at Albany, SUNY) with a Bachelor of Science degree in mathematics in 1954 and began teaching s |
+|             |        | chool in Peru, New York.[10] After two years, she enrolled at the University of Michigan and earned a Master of Science deg |
+|             |        |                                               ree in mathematics in 1957.[11]                                               |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|   Anthony   |   6    | Lisa Anthony earned her B.S. and M.S. in computer science with official concentrations in artificial intelligence, human-co |
+|             |        | mputer Interaction, and software engineering at Drexel University. Her M.S. thesis involved using genetic programming to ev |
+|             |        | olve board evaluation functions for the strategy board game Acquire.[citation needed] As a summer graduate intern, she work |
+|             |        | ed on the Collaborative Exploratory Search project at the Fuji-Xerox Palo Alto Laboratory (FXPAL).[citation needed] In 2008 |
+|             |        | , she earned her Ph.D. from the Human Computer Interaction Institute in the School of Computer Science at Carnegie Mellon U |
+|             |        | niversity in 2008. Her Ph.D. thesis focused on developing handwriting-based systems for algebra equation-solving.[citation  |
+|             |        |                                                           needed]                                                           |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|    Bader    |   6    | Bader is the son of chemistry professor Morris Bader and his wife Karen.[27] He is an Eagle Scout in the Boy Scouts of Amer |
+|             |        | ica, earning the rank in 1985.[28] Bader graduated from Liberty High School in Bethlehem, Pennsylvania in 1987.[29] He rece |
+|             |        | ived a B.S. in computer engineering in 1990 and an M.S. in electrical engineering in 1991 from Lehigh University in Bethleh |
+|             |        | em, Pennsylvania.[30] He then received a Ph.D. in electrical engineering in 1996 from the University of Maryland, College P |
+|             |        | ark. While at UMD in 1992, Bader was awarded a NASA Graduate Student Researchers Fellowship by Gerald Soffen, project scien |
+|             |        |                          tist for the Viking missions to Mars, at Goddard Space Flight Center.[31]                          |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|    Bell     |   8    | Gordon Bell was born in Kirksville, Missouri. He grew up helping with the family business, Bell Electric, repairing applian |
+|             |        | ces and wiring homes.[1] Bell received a BS (1956), and MS (1957) in electrical engineering from MIT. He then went to the N |
+|             |        | ew South Wales University of Technology (now UNSW) in Australia on a Fulbright Scholarship, where he taught classes on comp |
+|             |        | uter design, programmed one of the first computers to arrive in Australia (called UTECOM, an English Electric DEUCE), and p |
+|             |        | ublished his first academic paper. Returning to the US, he worked in the MIT Speech Computation Laboratory under Professor  |
+|             |        |                            Ken Stevens, where he wrote the first analysis by synthesis program.                             |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|  Caspersen  |   7    | Michael was born in Svendborg, Denmark. He went to Nordre Skole for primary and lower secondary school and to Svendborg Sta |
+|             |        | tsgymnasium for upper secondary school. He earned an M.Sc. in computer science from Aarhus University.[11] At Aarhus Univer |
+|             |        | sity, Michael was exposed to world-class computing education; new ideas of programming methodology developed by Dijkstra fo |
+|             |        | und their way into the first-year course, as did relational algebra and the semantics of programs. This educational experie |
+|             |        | nce had a profound impact on Michael's perspective on computing and devotion to computer science education, leading to his  |
+|             |        |                                                       PhD thesis.[14]                                                       |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|    Comer    |   8    | Comer holds a BS in Mathematics and Physics from Houghton College earned in 1971 and a PhD in Computer Science from Pennsyl |
+|             |        | vania State University earned in 1976. He is a Distinguished Professor of Computer Science and professor of electrical and  |
+|             |        | computer engineering at Purdue University in the US. Beginning in the late 1970s he started his continuing research into TC |
+|             |        |           P/IP, which has earned him international fame in the field of Computer Science and computer networking.           |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|    Croft    |   8    | Croft earned a bachelor's degree with honors in 1973 and a master's degree in computer science in 1974 from Monash Universi |
+|             |        | ty in Melbourne, Australia.  He earned his Ph.D in computer science from the University of Cambridge in 1979 and joined the |
+|             |        |                                University of Massachusetts, Amherst faculty later that year.                                |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|    Dean     |   6    | Dean received a B.S., summa cum laude, from the University of Minnesota in computer science and economics in 1990.[3] He re |
+|             |        | ceived a Ph.D. in computer science from the University of Washington in 1996, working under Craig Chambers on compilers[4]  |
+|             |        | and whole-program optimization techniques for object-oriented programming languages.[5] He was elected to the National Acad |
+|             |        | emy of Engineering in 2009, which recognized his work on "the science and engineering of large-scale distributed computer s |
+|             |        |                                                         ystems".[6]                                                         |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|   Diffie    |   6    | Diffie was born in Washington, D.C., the son of Justine Louise (Whitfield), a writer and scholar, and Bailey Wallys Diffie, |
+|             |        |  who taught Iberian history and culture at City College of New York.[8] His interest in cryptography began at "age 10 when  |
+|             |        | his father, a professor, brought home the entire crypto shelf of the City College Library in New York."[8] At Jamaica High  |
+|             |        | School in Queens, New York, Diffie "performed competently" but "never did apply himself to the degree his father hoped." Al |
+|             |        | though he graduated with a local diploma, he did not take the statewide Regents examinations that would have awarded him an |
+|             |        |  academic diploma because he had previously secured admission to Massachusetts Institute of Technology on the basis of "str |
+|             |        | atospheric scores on standardized tests."[9] While he received a B.S. in mathematics from the institution in 1965, he remai |
+|             |        | ned unengaged and seriously considered transferring to the University of California, Berkeley (which he perceived as a more |
+|             |        |  hospitable academic environment) during the first two years of his undergraduate studies. At MIT, he began to program comp |
+|             |        | uters (in an effort to cultivate a practical skill set) while continuing to perceive the devices "as very low class... I th |
+|             |        | ought of myself as a pure mathematician and was very interested in partial differential equations and topology and things l |
+|             |        |                                                        ike that."[9]                                                        |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|  Dongarra   |   15   | Dongarra received a BSc degree in mathematics from Chicago State University in 1972 and a MSc degree in Computer Science fr |
+|             |        | om the Illinois Institute of Technology in 1973. In 1980, he received PhD in Applied Mathematics from the University of New |
+|             |        |                                       Mexico under the supervision of Cleve Moler.[1]                                       |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|   Draper    |   6    | Draper was born in Windsor, Missouri. He attended the University of Missouri in 1917, then transferred to Stanford Universi |
+|             |        | ty, California in 1919, from which he earned a B.A. in psychology in 1922. He matriculated at MIT in 1922, earning a Bachel |
+|             |        | or of Science degree in electrochemical engineering (1926), and Master of Science (1928), and a Doctor of Science (1938) de |
+|             |        | grees in physics.[3] Charles Stark Draper's relatives were prominent in his home state of Missouri, including his cousin, G |
+|             |        |                                                   overnor Lloyd C. Stark.                                                   |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|    Dunn     |   11   | Dunn was born in Fort Wayne, Indiana. He went to high school in Lafayette, Indiana, where he worked in Purdue Biology labor |
+|             |        | atories after school and summers. He was the first in his family to go to college. He obtained an A.B. in Philosophy from O |
+|             |        | berlin College and a Ph.D. in philosophy (Logic) from the University of Pittsburgh, where he wrote his dissertation, The Al |
+|             |        |                                               gebra of Intensional Logics.[3]                                               |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|   Edelman   |   7    | Edelman received B.S. and M.S. degrees in mathematics from Yale University in 1984, and a Ph.D. in applied mathematics from |
+|             |        |  MIT in 1989 under the direction of Lloyd N. Trefethen. Following a year at Thinking Machines Corporation, and at CERFACS[4 |
+|             |        | ] in France, Edelman went to U.C. Berkeley as a Morrey Assistant Professor and Levy Fellow, 1990–93. He joined the MIT facu |
+|             |        |                                            lty in applied mathematics in 1993.                                              |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|  Engelbart  |   7    | Engelbart was born in Portland, Oregon, on January 30, 1925, to Carl Louis Engelbart and Gladys Charlotte Amelia Munson Eng |
+|             |        | elbart. His ancestors were of German, Swedish and Norwegian descent.[7] He was the middle of three children, with a sister  |
+|             |        | Dorianne (three years older), and a brother David (14 months younger). The family lived in Portland, Oregon, in his early y |
+|             |        | ears, and moved to the surrounding countryside along Johnson Creek when he was 8. His father died one year later. He gradua |
+|             |        | ted from Portland's Franklin High School in 1942.[8] Midway through his undergraduate years at Oregon State University, he  |
+|             |        | served two years in the United States Navy as a radio and radar technician in the Philippines.[8] It was there, on the remo |
+|             |        | te island of  Leyte in a small traditional hut on stilts, that he read Vannevar Bush's article "As We May Think", which wou |
+|             |        | ld have a large influence on his thinking and work.[9] He returned to Oregon State and completed his bachelor's degree in e |
+|             |        | lectrical engineering in 1948. While at Oregon State, he was a member of Sigma Phi Epsilon social fraternity.[10][11] He wa |
+|             |        | s hired by the National Advisory Committee for Aeronautics at the Ames Research Center, where he worked in wind tunnel main |
+|             |        | tenance. In his off hours he enjoyed hiking, camping, and folk dancing. It was there he met Ballard Fish (August 18, 1928 – |
+|             |        |  June 18, 1997),[12] who was just completing her training to become an occupational therapist. They were married in Portola |
+|             |        |  State Park on May 5, 1951. Soon after, Engelbart left Ames to pursue graduate studies at the University of California, Ber |
+|             |        | keley. At Berkeley, he studied electrical engineering with a specialty in computers, earning his MS in 1953 and his PhD in  |
+|             |        |                                                          1955.[13]                                                          |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|   Fischer   |   8    | She obtained both a B.A. degree, with honors, in Mathematics and Chemistry and an M.A. degree in Applied Mathematics from t |
+|             |        | he University of British Columbia in 1952 and 1954, respectively. She then obtained her Ph.D. in Applied Mathematics and Co |
+|             |        | mputing at Cambridge University in 1957, pursuing coursework in quantum theory with Paul Dirac. She worked under the superv |
+|             |        | ision of Douglas Hartree, whom she assisted in programming the Electronic Delay Storage Automatic Calculator (EDSAC) for at |
+|             |        | omic-structure calculations. She served on the mathematics faculty of the University of British Columbia from 1957 till 196 |
+|             |        | 8, where she introduced numerical analysis and computer courses into the curriculum and was instrumental in the formation o |
+|             |        | f the Computer Science Department. Froese Fischer spent 1963-64 at the Harvard College Observatory, where she extended her  |
+|             |        | research on atomic-structure calculations. While at Harvard, she was the first woman scientist to be awarded an Alfred P. S |
+|             |        | loan Fellowship. In 1991 she became a Fellow of the American Physical Society, in part for her contribution to the discover |
+|             |        | y of negative calcium. In 1995 she was elected a member of the Royal Physiographic Society in Lund, in 2004 a foreign membe |
+|             |        | r of the Lithuanian Academy of Sciences, and in 2015 she was awarded an Honorary Doctorate in Technology from Malmö Univers |
+|             |        |                                                        ity, Sweden.                                                         |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|    Foley    |   6    | Foley was born in Pennsylvania. He attended Lehigh University in Bethlehem, Pennsylvania, where he graduated with a bachelo |
+|             |        | r's degree in electrical engineering in 1964. Foley was initiated into the Phi Beta Kappa Society and Tau Beta Pi while at  |
+|             |        | Lehigh. He received his Ph.D. in computer, information, and control engineering from the University of Michigan in 1969.[5] |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+| Goldwasser  |   11   | Born in New York City, Goldwasser obtained her Bachelor of Science degree in 1979 in mathematics and science from Carnegie  |
+|             |        | Mellon. She continued her studies in computer science at Berkeley, receiving a Master of Science degree in 1981 and a PhD i |
+|             |        |  n 1984.  While at Berkeley, she and her doctoral advisor, Manuel Blum, would propose the Blum-Goldwasser cryptosystem.[3]  |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|  Hennessy   |   9    | Hennessy was raised in Huntington, New York, as one of six children.[8] His father was an aerospace engineer, and his mothe |
+|             |        | r was a teacher before raising her children.[8] He earned his bachelor's degree in electrical engineering from Villanova Un |
+|             |        |   iversity, and his master's degree and Doctor of Philosophy in computer science from Stony Brook University.[4][16][17]    |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|   Hinton    |   9    | Hinton was educated at King's College, Cambridge. After repeatedly changing his degree between different subjects like natu |
+|             |        | ral sciences, history of art, and philosophy, he eventually graduated in 1970 with a bachelor of arts in experimental psych |
+|             |        | ology.[11] He continued his study at the University of Edinburgh where he was awarded a PhD in artificial intelligence in 1 |
+|             |        |                             978 for research supervised by Christopher Longuet-Higgins.[2][33]                              |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|    Hoare    |   7    | Tony Hoare was born in Colombo, Ceylon (now Sri Lanka) to British parents; his father was a colonial civil servant and his  |
+|             |        | mother was the daughter of a tea planter. Hoare was educated in England at the Dragon School in Oxford and the King's Schoo |
+|             |        | l in Canterbury.[13] He then studied Classics and Philosophy ("Greats") at Merton College, Oxford.[14] On graduating in 195 |
+|             |        | 6 he did 18 months National Service in the Royal Navy,[14] where he learned Russian.[15] He returned to the University of O |
+|             |        | xford in 1958 to study for a postgraduate certificate in statistics,[14] and it was here that he began computer programming |
+|             |        | , having been taught Autocode on the Ferranti Mercury by Leslie Fox.[16] He then went to Moscow State University as a Briti |
+|             |        |             sh Council exchange student,[14] where he studied machine translation under Andrey Kolmogorov.[15]              |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|  Hopcroft   |   8    | He received his bachelor's degree from Seattle University in 1961.[6] He received his master's degree and Ph.D. from Stanfo |
+|             |        | rd University in 1962 and 1964, respectively. He worked for three years at Princeton University and since then has been at  |
+|             |        |          Cornell University. Hopcroft is the grandson of Jacob Nist, founder of the Seattle-Tacoma Box Company.[7]          |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|   Hopper    |   9    | Grace Brewster Murray was born in New York City. She was the eldest of three children. Her parents, Walter Fletcher Murray  |
+|             |        | and Mary Campbell Van Horne, were of Scottish and Dutch descent, and attended West End Collegiate Church.[8] Her great-gran |
+|             |        | dfather, Alexander Wilson Russell, an admiral in the US Navy, fought in the Battle of Mobile Bay during the Civil War.[8]:  |
+|             |        | 2–3 Grace was very curious as a child; this was a lifelong trait. At the age of seven, she decided to determine how an alar |
+|             |        | m clock worked and dismantled seven alarm clocks before her mother realized what she was doing (she was then limited to one |
+|             |        |  clock).[9] For her preparatory school education, she attended the Hartridge School in Plainfield, New Jersey. Grace was in |
+|             |        | itially rejected for early admission to Vassar College at age 16 (because her test scores in Latin were too low), but she w |
+|             |        | as admitted the following year. She graduated Phi Beta Kappa from Vassar in 1928 with a bachelor's degree in mathematics an |
+|             |        | d physics and earned her master's degree at Yale University in 1930. In 1930, Grace Murray married New York University prof |
+|             |        | essor Vincent Foster Hopper (1906–1976); they divorced in 1945.[10][11] She did not marry again and retained his surname. I |
+|             |        | n 1934, Hopper earned a Ph.D. in mathematics from Yale[12] under the direction of Øystein Ore.[10][13] Her dissertation, "N |
+|             |        | ew Types of Irreducibility Criteria",[14] was published that same year.[15] She began teaching mathematics at Vassar in 193 |
+|             |        |                                   1, and was promoted to associate professor in 1941.[16]                                   |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|   Jordan    |   6    | Jordan received his BS magna cum laude in Psychology in 1978 from the Louisiana State University, his MS in Mathematics in  |
+|             |        | 1980 from Arizona State University and his PhD in Cognitive Science in 1985 from the University of California, San Diego.[1 |
+|             |        | 9] At the University of California, San Diego, Jordan was a student of David Rumelhart and a member of the Parallel Distrib |
+|             |        |                                          uted Processing (PDP) Group in the 1980s.                                          |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|    Khan     |   10   | Khan was a Bright Sparks scholar and received his PhD degree in Computer Science from University of Malaya.[14] He received |
+|             |        |  his Masters and Bachelor's degree (with honors) in Computer Science from COMSATS University under COMSATS scholarship. He  |
+|             |        |   has also attended a summer camp on Advance Wireless Networks at Technische Universität Ilmenau under DAAD scholarship.    |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|    Knuth    |   13   | Knuth received a scholarship in physics to the Case Institute of Technology (now part of Case Western Reserve University) i |
+|             |        | n Cleveland, Ohio, enrolling in 1956.[10] He also joined the Beta Nu Chapter of the Theta Chi fraternity. While studying ph |
+|             |        | ysics at Case, Knuth was introduced to the IBM 650, an early commercial computer. After reading the computer's manual, Knut |
+|             |        | h decided to rewrite the assembly and compiler code for the machine used in his school, because he believed he could do it  |
+|             |        | better.[11] In 1958, Knuth created a program to help his school's basketball team win their games.[12] He assigned "values" |
+|             |        |  to players in order to gauge their probability of scoring points, a novel approach that Newsweek and CBS Evening News late |
+|             |        | r reported on.[11] Knuth was one of the founding editors of the Case Institute's Engineering and Science Review, which won  |
+|             |        | a national award as best technical magazine in 1959.[13][14] He then switched from physics to mathematics, and received two |
+|             |        |  degrees from Case in 1960:[10] his bachelor of science, and simultaneously a master of science by a special award of the f |
+|             |        | aculty, who considered his work exceptionally outstanding.[4][11] In 1963, with mathematician Marshall Hall as his adviser, |
+|             |        | [2] he earned a PhD in mathematics from the California Institute of Technology for a thesis entitled Finite Semifields and  |
+|             |        |                                                   Projective Planes.[15]                                                    |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|   Lamport   |   6    | Lamport was born into a Jewish family in Brooklyn, New York, the son of Benjamin and Hannah Lamport (née Lasser).[citation  |
+|             |        | needed] His father was an immigrant from Volkovisk in the Russian Empire (now Vawkavysk, Belarus)[10] and his mother was an |
+|             |        |  immigrant from the Austro-Hungarian Empire, now southeastern Poland. A graduate of Bronx High School of Science, Lamport r |
+|             |        | eceived a B.S. in mathematics from the Massachusetts Institute of Technology in 1960, followed by M.A. (1963) and Ph.D. (19 |
+|             |        | 72) degrees in mathematics from Brandeis University.[11] His dissertation, The analytic Cauchy problem with singular data,  |
+|             |        |                           is about singularities in analytic partial differential equations.[12]                            |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|   Lampson   |   6    | After graduating from the Lawrenceville School (where in 2009 he was awarded the Aldo Leopold Award, also known as the Lawr |
+|             |        | enceville Medal, Lawrenceville's highest award to alumni), Lampson received an A.B. in physics (magna cum laude with highes |
+|             |        | t honors in the discipline) from Harvard University in 1964 and a PhD in electrical engineering and computer science from t |
+|             |        |                                       he University of California, Berkeley in 1967.                                        |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|    Lynch    |   7    | Lynch was born in Brooklyn, and her academic training was in mathematics. She attended Brooklyn College and MIT, where she  |
+|             |        |                         received her Ph.D. in 1972 under the supervision of Albert R. Meyer.[2][3]                          |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|   Maulik    |   11   | He did his schooling from Nabadwip Bakultala High School, Nabadwip, Nadia and Ramakrishna Mission Vivekananda Centenary Col |
+|             |        | lege,[5] Rahara, 24 Parganas (North) both in West Bengal.  Subsequently, he completed B.Sc. in Physics and B. Tech. in Comp |
+|             |        | uter Science from University of Calcutta,[6] Kolkata, West Bengal, India in 1986 and 1989.  He also received his M. Tech. i |
+|             |        | n Computer Science and Ph.D. in Engineering in 1992 and 1997 at Jadavpur University,[7] Kolkata, West Bengal, India. He did |
+|             |        |  post-doctoral research at the University of New South Wales, Australia[8] in 1999 and the University of Texas, Arlington,[ |
+|             |        |                                                      9] U.S. in 2001.                                                       |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|  McCarthy   |   6    | John McCarthy was born in Boston, Massachusetts, on September 4, 1927, to an Irish immigrant father and a Lithuanian Jewish |
+|             |        |  immigrant mother,[4] John Patrick and Ida (Glatt) McCarthy. The family was obliged to relocate frequently during the Great |
+|             |        |  Depression, until McCarthy's father found work as an organizer for the Amalgamated Clothing Workers in Los Angeles, Califo |
+|             |        | rnia. His father came from Cromane, a small fishing village in County Kerry, Ireland.[5] His mother died in 1957.[6] Both p |
+|             |        | arents were active members of the Communist Party during the 1930s, and they encouraged learning and critical thinking. Bef |
+|             |        | ore he attended high school, he got interested in science by reading a translation of a Russian popular science book for ch |
+|             |        | ildren, called 100,000 Whys.[7]  John was fluent in the Russian language and made friends with Russian scientists during mu |
+|             |        | ltiple trips to the Soviet Union but he distanced himself after making visits to the Soviet Bloc which led to him becoming  |
+|             |        | a conservative Republican.[8] McCarthy graduated from Belmont High School two years early.[9] McCarthy was accepted into Ca |
+|             |        | ltech in 1944. McCarthy showed an early aptitude for mathematics; during his teens he taught himself college mathematics by |
+|             |        |  studying the textbooks used at the nearby California Institute of Technology (Caltech). As a result, he was able to skip t |
+|             |        |                                      he first two years of mathematics at Caltech.[10]                                      |
+|             |        | McCarthy was suspended from Caltech for failure to attend physical education courses.[11] He then served in the US Army and |
+|             |        |  was readmitted, receiving a BS in mathematics in 1948.[12] It was at Caltech that he attended a lecture by John von Neuman |
+|             |        | n that inspired his future endeavors. McCarthy initially completed graduate studies at Caltech before moving to Princeton U |
+|             |        | niversity. He received a PhD in mathematics from Princeton in 1951 after completing a doctoral dissertation, titled "Projec |
+|             |        |             tion operators and partial differential equations", under the supervision of Donald C. Spencer.[13]             |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|    Moore    |   9    | Gordon Moore was born in 1929 as the second son of Walter Harold Moore (a county sheriff stationed in San Mateo County) and |
+|             |        |  Florence Almira "Mira" Williamson (a homemaker).[9] When Moore started school in 1935, the faculty noted his introverted p |
+|             |        | ersonality.[10] His father accepted a promotion to deputy sheriff in 1938 and moved the family to Redwood City, California. |
+|             |        | [11] In 1940, Moore received a chemistry set as a Christmas gift, which inspired him to become a chemist.[12] From 1942 to  |
+|             |        | 1946, Moore studied at Sequoia High School, where he was involved in athletic activities.[13] From 1946 to 1947, Moore atte |
+|             |        | nded San José State College (now San José State University), studying chemistry.[14] He transferred to University of Califo |
+|             |        | rnia, Berkeley in 1948, taking courses from Glenn Seaborg, Melvin Calvin, and William Giauque. He graduated in 1950 with a  |
+|             |        | Bachelor of Science degree in chemistry.[15][16] In September 1950, Moore enrolled at the California Institute of Technolog |
+|             |        | y ("Caltech"), where he would ultimately receive a Ph.D. in chemistry in 1954.[17][16][18][19] Moore conducted postdoctoral |
+|             |        |                research at the Applied Physics Laboratory at Johns Hopkins University from 1953 to 1956.[16]                |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|    Nivat    |   7    | Nivat was born in Clermont-Ferrand, France. His parents were high-school teachers; his father taught languages while his mo |
+|             |        |                       ther taught mathematics. His sister, Aline, became a notable mathematician.[2]                        |
+|             |        | In 1954, Nivat moved with his family to Paris.[2] Nivat was admitted to the École Normale Supérieure in 1956, but began wor |
+|             |        | king at the Blaise Pascal Institute of the French National Centre for Scientific Research, a newly established computing la |
+|             |        | boratory, in 1959.[1][2] He returned to study mathematics in 1961 under the supervision of Marcel-Paul Schützenberger.[1] H |
+|             |        |          is 1967 thesis was entitled Transductions des langages de Chomsky ("Transductions of Chomsky Languages").          |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|   O'Hearn   |   9    | O'Hearn attained a BSc degree in computer science from Dalhousie University, Halifax, Nova Scotia (1985), followed by MSc ( |
+|             |        | 1987) and PhD (1991) degrees from Queen's University, Kingston, Ontario, Canada. His dissertation was on Semantics of Non-i |
+|             |        |                          nterference: A natural approach, supervised by Robert D. Tennent.[11][19]                          |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|    Page     |   9    | Page attended the Okemos Montessori School (now called Montessori Radmoor) in Okemos, Michigan, from ages 2 to 7 (1975 to 1 |
+|             |        | 979). He attended East Lansing High School, graduating in 1991. In summer school, he attended Interlochen Center for the Ar |
+|             |        | ts at Interlochen, Michigan, playing flute but mainly saxophone for two summers. Page received a Bachelor of Science in a m |
+|             |        | ajor in computer engineering with honors from the University of Michigan in 1995 and a Master of Science in computer scienc |
+|             |        | e from Stanford University in 1998.[33][34][35][36] While at the University of Michigan, Page created an inkjet printer mad |
+|             |        | e of Lego bricks (literally a line plotter), after he thought it possible to print large posters cheaply with the use of in |
+|             |        | kjet cartridges—Page reverse-engineered the ink cartridge and built the electronics and mechanics to drive it.[27] Page ser |
+|             |        | ved as the president of the Beta Epsilon chapter of the Eta Kappa Nu honor society,[37] and was a member of the 1993 "Maize |
+|             |        |  & Blue" University of Michigan Solar Car team.[38] As an undergraduate at the University of Michigan, he proposed that the |
+|             |        |  school replace its bus system with a personal rapid-transit system, which is essentially a driverless monorail with separa |
+|             |        | te cars for every passenger.[10] He also developed a business plan for a company that would use software to build a music s |
+|             |        |                                              ynthesizer during this time.[39]                                               |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|  Patterson  |   6    | David Patterson grew up in Evergreen Park, Illinois. He graduated from South High School in Torrance, California. He then a |
+|             |        | ttended the University of California, Los Angeles (UCLA), receiving his Bachelor of Arts degree in Mathematics in 1969. He  |
+|             |        | continued on to obtain his Master of Science degree in 1970 and PhD in 1976, both in Computer Science at UCLA. Patterson's  |
+|             |        |                            PhD was advised by David F. Martin and Gerald Estrin.[12][13][14][15]                            |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|   Perlman   |   11   | As an undergraduate at MIT Perlman learned programming for a physics class. She was given her first paid job in 1971 as par |
+|             |        | t-time programmer for the LOGO Lab at the (then) MIT Artificial Intelligence Laboratory, programming system software such a |
+|             |        | s debuggers. [14] Working under the supervision of Seymour Papert, she developed a child-friendly version of the educationa |
+|             |        | l robotics language LOGO, called TORTIS ("Toddler's Own Recursive Turtle Interpreter System"). During research performed in |
+|             |        |  1974–76, young children—the youngest aged 3½ years, programmed a LOGO educational robot called a Turtle. Perlman has been  |
+|             |        | described as a pioneer of teaching young children computer programming.[15] Afterwards, she was inspired to make a new prog |
+|             |        | ramming language that would teach much younger children similar to Logo, but using special "keyboards" and input devices. T |
+|             |        | his project was abandoned because "being the only woman around, I wanted to be taken seriously as a 'scientist' and was a l |
+|             |        | ittle embarrassed that my project involved cute little kids". MIT media project later tracked her down and told her that sh |
+|             |        |           e started a new field called tangible user interface from the leftovers of her abandoned project. [16]            |
+|             |        | As a math grad at MIT she needed to find an adviser for her thesis, and joined the MIT group at BBN Technologies. There she |
+|             |        |  first got involved with designing network protocols.[17] Perlman obtained a B.S. and M.S. in Mathematics and a Ph.D. in Co |
+|             |        | mputer Science from MIT in 1988.[18]  She earned her PhD in computer science from MIT in 1988; her doctoral thesis on routi |
+|             |        | ng in environments where malicious network failures are present serves as the basis for much of the work that now exists in |
+|             |        |  this area. [2] When studying at MIT in the late 60s she was one among the 50 or so women students, in a class of about 1,0 |
+|             |        | 00 students. To begin with MIT only had one women’s dorm, limiting the number of women students that could study. When the  |
+|             |        | men’s dorms at MIT became coed Perlman moved out of the women’s dorm into a mixed dorm, where she became the "resident fema |
+|             |        | le". She later said that she was so used to the gender imbalance, that it became normal. Only when she saw other women stud |
+|             |        |                          ents among a crowd of men she noticed that "it kind of looked weird".[19]                          |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|    Rabin    |   10   | Rabin was born in 1931 in Breslau, Germany (today Wrocław, in Poland), the son of a rabbi. In 1935, he emigrated with his f |
+|             |        | amily to Mandate Palestine. As a young boy, he was very interested in mathematics and his father sent him to the best high  |
+|             |        | school in Haifa, where he studied under mathematician Elisha Netanyahu, who was then a high school teacher.[1] Rabin gradua |
+|             |        | ted from the Hebrew Reali School in Haifa in 1948, and was drafted into the army during the 1948 Arab–Israeli War. The math |
+|             |        | ematician Abraham Fraenkel, who was a professor of mathematics in Jerusalem, intervened with the army command, and Rabin wa |
+|             |        | s discharged to study at the university in 1949.[1] Afterwards, he received an M.Sc from Hebrew University of Jerusalem. He |
+|             |        |   began graduate studies at the University of Pennsylvania before receiving a Ph.D. from Princeton University in 1956.[2]   |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|    Reddy    |   6    | Raj Reddy was born in a Telugu family[5] in Katur village of Chittoor district of present-day Andhra Pradesh, India. His fa |
+|             |        | ther, Sreenivasulu Reddy, was a farmer, and his mother, Pitchamma, was a homemaker. He was the first member of his family t |
+|             |        | o attend college. He received his bachelor's degree in civil engineering from College of Engineering, Guindy,[6] then affil |
+|             |        | iated to the University of Madras (now to Anna University, Chennai), India, in 1958,[7] and a MEng degree from the Universi |
+|             |        | ty of New South Wales, Australia, in 1960. He received his PhD degree in Computer Science from Stanford University in 1966. |
+|             |        |                                                             [8]                                                             |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|    Saif     |   6    | Saif attended Aitchison College before enrolling at Lahore University of Management Sciences where he obtained a Bachelor o |
+|             |        | f Science degree in computer science[4] in 1998.[5] He received a doctor of philosophy degree in computer science from the  |
+|             |        | University of Cambridge at the age of 22[6] in 2001.[5] In 2002 he did his postdoc[6] at MIT, also in computer science.[5][ |
+|             |        | 7] From 2001 to 2005 he taught at MIT[4] and worked at the MIT Computer Science and Artificial Intelligence Laboratory (CSA |
+|             |        |                  IL) as a research scientist,[5] becoming part of the team which developed Project Oxygen.                  |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+| Schoenebeck |   6    | Schoenebeck is from California. She was an undergraduate student in engineering at Dartmouth College.[1] As an undergraduat |
+|             |        | e student played tennis, and earned first team all-ivy honours three times.[1] She moved to the University of California, B |
+|             |        | erkeley for her graduate studies, where she completed a Master's in information management.[2][3] She was selected as the 2 |
+|             |        | 006 UC Berkeley School of Information Class Speaker.[4] Schoenebeck was a doctoral researcher at Georgia Tech, where she st |
+|             |        |                        udied ways that parents could support young people's use of social media.[5]                         |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|  Schölkopf  |   10   | Schölkopf studied mathematics, physics, and philosophy in Tübingen and London. He was supported by the Studienstiftung and  |
+|             |        | won the Lionel Cooper Memorial Prize for the best M.Sc. in Mathematics at the University of London.[32] He completed a Dipl |
+|             |        | om in Physics, and then moved to Bell Labs in New Jersey, where he worked with Vladimir Vapnik, who became co-adviser of hi |
+|             |        | s PhD thesis at the TU Berlin (with Stefan Jähnichen). His thesis, defended in 1997, won the annual award of the German Inf |
+|             |        | ormatics Association.[33] In 2001, following positions in Berlin, Cambridge and New York, he founded the Department for Emp |
+|             |        | irical Inference at the Max Planck Institute for Biological Cybernetics, which grew into a leading center for research in m |
+|             |        | achine learning. In 2011, he became founding director at the Max Planck Institute for Intelligent Systems.[34][35] With Ale |
+|             |        | x Smola, Schölkopf co-founded the series of Machine Learning Summer Schools.[36] He also co-founded a Cambridge-Tübingen Ph |
+|             |        | D Programme[37] and the Max Planck-ETH Center for Learning Systems.[38] In 2016, he co-founded the Cyber Valley research co |
+|             |        | nsortium.[39] He participated in the IEEE Global Initiative on "Ethically Aligned Design".[40] Schölkopf is co-editor-in-Ch |
+|             |        | ief of the Journal of Machine Learning Research, a journal he helped found, being part of a mass resignation of the editori |
+|             |        | al board of Machine Learning (journal). He is among the world’s most cited computer scientists.[41] Alumni of his lab inclu |
+|             |        | de Ulrike von Luxburg, Carl Rasmussen, Matthias Hein, Arthur Gretton, Gunnar Rätsch, Matthias Bethge, Stefanie Jegelka, Jas |
+|             |        |            on Weston, Olivier Bousquet, Olivier Chapelle, Joaquin Quinonero-Candela, and Sebastian Nowozin.[42]             |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+| Shneiderman |   8    | Born in New York, Shneiderman, attended the Bronx High School of Science, and received a BS in Mathematics and Physics from |
+|             |        |  the City College of New York in 1968. He then went on to study at the State University of New York at Stony Brook, where h |
+|             |        |                       e received an MS in Computer Science in 1972 and graduated with a PhD in 1973.                        |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|    Simon    |   10   | Herbert Alexander Simon was born in Milwaukee, Wisconsin on June 15, 1916. Simon's father, Arthur Simon (1881–1948), was a  |
+|             |        | Jewish[13] electrical engineer who came to the United States from Germany in 1903 after earning his engineering degree at T |
+|             |        | echnische Hochschule Darmstadt.[14] An inventor, Arthur also was an independent patent attorney.[15] Simon's mother, Edna M |
+|             |        | arguerite Merkel (1888–1969), was an accomplished pianist whose Jewish, Lutheran, and Catholic ancestors came from Braunsch |
+|             |        | weig, Prague and Cologne.[16] Simon's European ancestors were piano makers, goldsmiths, and vintners. Simon attended Milwau |
+|             |        | kee Public Schools, where he developed an interest in science and established himself as an atheist. While attending middle |
+|             |        |  school, Simon wrote a letter to "the editor of the Milwaukee Journal defending the civil liberties of atheists".[17] Unlik |
+|             |        | e most children, Simon's family introduced him to the idea that human behavior could be studied scientifically; his mother' |
+|             |        | s younger brother, Harold Merkel (1892–1922), who studied economics at the University of Wisconsin–Madison under John R. Co |
+|             |        | mmons, became one of his earliest influences. Through Harold's books on economics and psychology, Simon discovered social s |
+|             |        | cience. Among his earliest influences, Simon cited Norman Angell for his book The Great Illusion and Henry George for his b |
+|             |        | ook Progress and Poverty. While attending high school, Simon joined the debate team, where he argued "from conviction, rath |
+|             |        | er than cussedness" in favor of George's single tax.[18] In 1933, Simon entered the University of Chicago, and, following h |
+|             |        | is early influences, decided to study social science and mathematics. Simon was interested in studying biology but chose no |
+|             |        | t to pursue the field because of his "color-blindness and awkwardness in the laboratory".[19] At an early age, Simon learne |
+|             |        | d he was color blind and discovered the external world is not the same as the perceived world. While in college, Simon focu |
+|             |        | sed on political science and economics. Simon's most important mentor was Henry Schultz, an econometrician and mathematical |
+|             |        |  economist.[1] Simon received both his B.A. (1936) and his Ph.D. (1943) in political science from the University of Chicago |
+|             |        | , where he studied under Harold Lasswell, Nicolas Rashevsky, Rudolf Carnap, Henry Schultz, and Charles Edward Merriam.[20]  |
+|             |        | After enrolling in a course on "Measuring Municipal Governments," Simon became a research assistant for Clarence Ridley, an |
+|             |        | d the two co-authored Measuring Municipal Activities: A Survey of Suggested Criteria for Appraising Administration in 1938. |
+|             |        | [21] Simon's studies led him to the field of organizational decision-making, which became the subject of his doctoral disse |
+|             |        |                                                          rtation.                                                           |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|  Sterling   |   6    | Sterling began his undergraduate studies in 1968 at the Polytechnic Institute of Brooklyn completing his BSEE degree in 197 |
+|             |        | 2 (Summa Cum Laude) from the Old Dominion University. Upon separation from the US Navy in 1977, he matriculated at the Mass |
+|             |        | achusetts Institute of Technology (MIT). Thomas Sterling earned his SMEE from MIT in 1981, his EE in 1983, and his Ph.D in  |
+|             |        |                          1984 as a Hertz Fellow under the supervision of Prof. Robert H. Halstead.                          |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+| Stroustrup  |   11   | Stroustrup was born in Aarhus, Denmark. His family was working class, and he attended local schools.[6] He attended Aarhus  |
+|             |        | University from 1969 to 1975 and graduated with a Candidatus Scientiarum in mathematics with computer science.[7] His inter |
+|             |        | ests focused on microprogramming and machine architecture. He learned the fundamentals of object-oriented programming from  |
+|             |        | its inventor, Kristen Nygaard, who frequently visited Aarhus. In 1979, he received his PhD in computer science from the Uni |
+|             |        |       versity of Cambridge,[8][9] where his research on distributed computing was supervised by David Wheeler.[1][8]        |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|   Taylor    |   6    | Valerie Elaine Taylor was born May 24, 1963, in Chicago, Illinois.[2][3] Taylor received her bachelor's and master's degree |
+|             |        | s in electrical engineering from Purdue University in 1985 and 1986, respectively.[2] In 1991, Taylor received her PhD at t |
+|             |        | he University of California, Berkeley in electrical engineering and computer science, under advisor David Messerschmitt.[4] |
+|             |        |                           [5] She holds a patent for her dissertation work on sparse matrices.[6]                           |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|  Thompson   |   9    | Thompson was born in New Orleans, Louisiana. When asked how he learned to program, Thompson stated, "I was always fascinate |
+|             |        | d with logic and even in grade school I'd work on arithmetic problems in binary, stuff like that. Just because I was fascin |
+|             |        | ated."[3] Thompson received a Bachelor of Science in 1965 and a master's degree in 1966, both in Electrical Engineering and |
+|             |        |  Computer Sciences, from the University of California, Berkeley, where his master's thesis advisor was Elwyn Berlekamp.[4]  |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|   Valiant   |   6    | Valiant was educated at King's College, Cambridge,[14][6] Imperial College London,[14][6] and the University of Warwick whe |
+|             |        |                                  re he received a PhD in computer science in 1974.[15][1]                                   |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|   Vapnik    |   11   | Vladimir Vapnik was born to a Jewish family[3] in the Soviet Union. He received his master's degree in mathematics from the |
+|             |        |  Uzbek State University, Samarkand, Uzbek SSR in 1958 and Ph.D in statistics at the Institute of Control Sciences, Moscow i |
+|             |        |    n 1964. He worked at this institute from 1961 to 1990 and became Head of the Computer Science Research Department.[4]    |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|    Vardi    |   7    | Vardi was an undergraduate student at Bar-Ilan University and received his Master of Science degree from the Weizmann Insti |
+|             |        |  tute of Science.[4] His PhD was supervised by Catriel Beeri and awarded by the Hebrew University of Jerusalem in 1981.[3]  |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|   Viterbi   |   8    | Viterbi attended the Boston Latin School, and then entered Massachusetts Institute of Technology (MIT) in 1952, studying el |
+|             |        | ectrical engineering. He received both BS and MS in electrical engineering in 1957 from MIT. He was elected to membership i |
+|             |        | n the honor society Eta Kappa Nu in 1956 through the MIT chapter. He worked at Raytheon and later at Jet Propulsion Laborat |
+|             |        | ory (JPL) in Pasadena, California, where he started working on telemetry for uncrewed space missions, also helping to devel |
+|             |        | op the phase-locked loop. Simultaneously, he was carrying out PhD studies at the University of Southern California, where h |
+|             |        |                                      e graduated in 1963 in digital communications.[3]                                      |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|    Widom    |   6    | Widom earned a BS degree in trumpet performance from the Indiana University Jacobs School of Music in 1982 and a PhD in com |
+|             |        |                           puter science under David Gries from Cornell University in 1987.[3][4]                            |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
+|   Wilson    |   6    | Wilson was born in 1957 and brought up in Leeds, Yorkshire. Her parents were both teachers, with her father specialising in |
+|             |        |  English and her mother in physics.[3] From 1975,[9] she studied computer science and the Mathematical Tripos at Selwyn Col |
+|             |        | lege, University of Cambridge[4] and was a member of their Microprocessor society.[10] In an Easter break from university,  |
+|             |        | Wilson designed a microcomputer with a MOS Technology 6502 microprocessor, inspired by the earlier MK14,[11] which was used |
+|             |        |                                         to electronically control feed for cows.[7]                                         |
++-------------+--------+-----------------------------------------------------------------------------------------------------------------------------+
