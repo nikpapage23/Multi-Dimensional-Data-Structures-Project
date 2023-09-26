@@ -1,5 +1,5 @@
 
-# Multidimension Data Structures Project @CEID
+# Multidimensional Data Structures Project @CEID
 
 This project aims to implement multidimensional data structures using Python. These data structures are evaluated utilizing real datasets in various basic operations, including building, inserting, deleting, updating, and searching for different types of queries. 
 
