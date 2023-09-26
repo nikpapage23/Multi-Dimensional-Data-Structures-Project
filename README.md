@@ -32,7 +32,7 @@ To deploy this project run
 
 ## Screenshots
 
-![Experiments](https://github.com/nikpapage23/Multi-Dimensional-Data-Structures-Project/blob/main/Multi-Dimensional_Data_Structures_PROJECT/screenshots/Figure_1.png)
+![Experiments](https://github.com/nikpapage23/Multi-Dimensional-Data-Structures-Project/blob/main/Multi-Dimensional_Data_Structures_PROJECT/screenshots/Figure_2.png)
 
 ## Authors
 
